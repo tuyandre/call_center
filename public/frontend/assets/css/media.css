@@ -1,0 +1,204 @@
+@media (max-width: 1200px) {
+    .header_rightTop ul li {
+        font-size: 14px;
+    }
+    .about_img {
+        margin-top: 50px;
+    }
+    .header_rightBottom ul li {
+        margin-right: 30px;
+    }
+    .header_rightTop ul li a {
+        padding: 13px 12px;
+    }
+    .service_section {
+        min-height: 351px;
+    }
+    .blog_section {
+        min-height: 552px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {}
+
+@media(max-width:991px) {
+    .cc_banner .caption h1,
+    .typing_text span {
+        font-size: 38px;
+    }
+    .faq_img img {
+        display: none;
+    }
+    .faq_tab {
+        padding-bottom: 80px;
+    }
+    .copyright_section {
+        text-align: center;
+    }
+    .copy_right {
+        float: none
+    }
+    .cc_mainblog .blog_right {
+        padding-top: 50px;
+    }
+    .blog_section {
+        min-height: 533px;
+    }
+    @media (min-width:768px) and (max-width: 991px) {
+        .cc_header .cc_logo {
+            padding: 20px 0;
+            text-align: center;
+            float: none;
+        }
+        .menu_fixed .cc_logo {
+            padding: 10px 0 0;
+        }
+    }
+    @media (max-width:767px) {
+        .header_rightBottom .cc_btn {
+            float: none;
+        }
+        .navbar-collapse {
+            width: 300px;
+        }
+        .header_rightBottom ul li {
+            width: 100%;
+            padding: 13px 0;
+            margin-right: 0;
+        }
+        .navbar-toggle .icon-bar {
+            height: 4px;
+            background: #20d0be;
+        }
+        .header_rightBottom .cc_login {
+            float: left;
+        }
+        .header_rightBottom ul {
+            padding-left: 10px;
+        }
+        .toogle_span {
+            display: none;
+        }
+        .cc_header .cc_logo {
+            padding: 15px 0;
+        }
+        .cc_header .header_rightTop {
+            display: none;
+            position: absolute;
+        }
+        .cc_blog {
+            text-align: center;
+        }
+        .blog_section {
+            width: 60%;
+            display: inline-block;
+        }
+        .blog_img img {
+            width: 100%;
+        }
+        .cc_footer .widget {
+            text-align: center;
+        }
+        .cc_footer .widget_media {
+            display: inline-block;
+        }
+        .blog_right {
+            padding-top: 50px;
+        }
+        .cc_login_form ul li,
+        .modal-footer ul li {
+            width: auto;
+            padding: 0;
+        }
+        .cc_login_form ul,
+        .modal-footer ul {
+            padding: left:0;
+        }
+        .modal-header:before,
+        .modal-header:after {
+            display: none;
+        }
+        .service_section {
+            min-height: 291px;
+        }
+    }
+    @media (max-width:667px) {
+        .caption .form-control {
+            width: 75%;
+        }
+        .caption .search_btn {
+            width: 25%;
+            font-size: 16px;
+        }
+        .cc_banner .caption h1,
+        .typing_text span {
+            font-size: 30px;
+        }
+    }
+    @media (max-width:600px) {}
+    @media (max-width:578px) {
+        .nav-tabs>li>a {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .cc_counter .col-xs-6 {
+            width: 100%;
+        }
+        .comment_list .comment_section .cc_btn {
+            width: 95px;
+        }
+    }
+    @media (max-width:480px) {
+        .nav-tabs>li>a {
+            font-size: 14px;
+        }
+        .blog_section {
+            width: 100%;
+        }
+        .testimonial_img {
+            float: none;
+        }
+        .testimonial_content {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        .testimonial_content ul {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .about_slider .item h2 a {
+            font-size: 16px;
+        }
+        .cc_login_form ul {
+            width: 100%;
+            float: left;
+            text-align: left;
+        }
+        .modal-footer .cc_btn {
+            margin-top: 20px;
+        }
+        .modal-body {
+            padding: 50px 25px;
+        }
+    }
+    @media (max-width:375px) {
+        .caption .form-control {
+            width: 60%;
+        }
+        .caption .search_btn {
+            width: 40%;
+        }
+        .about_img .col-xs-6 {
+            width: 100%;
+        }
+        .about_img img {
+            margin-bottom: 30px;
+        }
+        .caption .form-control,
+        .caption .search_btn {
+            height: 45px;
+        }
+    }
+    @media (max-width:320px) {}
+    @media (max-width:240px) {}

@@ -1,0 +1,69 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 21/11/2018 08:10
+  	*/
+
+	@font-face {
+	    font-family: "Flaticon";
+	    src: url("../fonts/Flaticon.eot");
+	    src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	    @font-face {
+	        font-family: "Flaticon";
+	        src: url("./Flaticon.svg#Flaticon") format("svg");
+	    }
+	}
+
+	[class^="flaticon-"]:before,
+	[class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after,
+	[class*=" flaticon-"]:after {
+	    font-family: Flaticon;
+	    font-size: 20px;
+	    font-style: normal;
+	    margin-left: 20px;
+	}
+
+	.flaticon-call-center-girl:before {
+	    content: "\f100";
+	}
+
+	.flaticon-video-camera:before {
+	    content: "\f101";
+	}
+
+	.flaticon-letter:before {
+	    content: "\f102";
+	}
+
+	.flaticon-chat:before {
+	    content: "\f103";
+	}
+
+	.flaticon-exam:before {
+	    content: "\f104";
+	}
+
+	.flaticon-teacher-pointing-a-board-with-a-stick:before {
+	    content: "\f105";
+	}
+
+	.flaticon-checklist:before {
+	    content: "\f106";
+	}
+
+	.flaticon-speed:before {
+	    content: "\f107";
+	}
+
+	.flaticon-designer:before {
+	    content: "\f108";
+	}
+
+	.flaticon-shopping-online-support:before {
+	    content: "\f109";
+	}
