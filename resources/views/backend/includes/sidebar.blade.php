@@ -38,7 +38,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#"><span class="shape1"></span>
+                <a class="nav-link" href="{{route('admin.reports.index')}}"><span class="shape1"></span>
                     <span class="shape2"></span><i class="ti-files sidemenu-icon"></i><span class="sidemenu-label">CALLS REPORTS</span></a>
             </li>
         </ul>

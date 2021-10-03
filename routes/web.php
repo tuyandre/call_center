@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CallController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,5 +45,12 @@ Route::group(['prefix' => '/home/'], function () {
     Route::get('get/Outgoing_calls', [CallController::class, 'getOutgoingCalls'])->name('admin.calls.getOutgoingCalls');
 
     Route::get('calls/callDetail/{id}', [CallController::class, 'callDetail'])->name('admin.calls.callDetail');
+
+
+
+
+    Route::get('/reports', [ReportController::class, 'index'])->name('admin.reports.index');
+    Route::post('/reports/get_all', [ReportController::class, 'getAllLogs'])->name('admin.reports.getAllLogs');
+    Route::post('/reports/get_customized', [ReportController::class, 'getCategorized'])->name('admin.reports.getCategorized');
 
 });
