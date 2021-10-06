@@ -9,6 +9,12 @@
 @endsection
 @section('content_title','SYSTEM Reports')
 @section('content_target','Reports')
+@section('action_buttons')
+    <button type="button"  target="_blank" class="btn btn-secondary my-2 btn-icon-text" id="report_export">
+        <i class="fe fe-download-cloud mr-2"></i> Export Report
+    </button>
+
+@endsection
 @section('contents')
 
 
@@ -52,17 +58,40 @@
     </div>
 
 
-
+    <input type="hidden" value="{{ Session::token() }}" id="token">
 
 @endsection
 @section('js')
 
     <script>
+        var start_date="{{$start_date}}";
+        var end_date="{{$end_date}}";
+        var cat="{{$cat}}";
 
+        console.log("satrt date::",start_date)
+        var export_url="{{route('admin.reports.exportAll')}}";
 
         $(document).ready(function () {
             $('#CallTable').DataTable();
 
+            $("#report_export").click(function () {
+
+                var formData = new FormData();
+                formData.append('start_date', start_date);
+                formData.append('end_date', end_date);
+                formData.append('category', cat);
+                formData.append('_token', $('#token').val());
+                $.ajax({
+                    type: 'POST',
+                    url: export_url,
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        console.log("SUCCESS : ", response);
+                    }
+                });
+            });
 
 
         });

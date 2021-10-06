@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CallController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,7 @@ Route::post('ishyiga/register', [RegisteredUserController::class, 'store'])
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -52,5 +53,8 @@ Route::group(['prefix' => '/home/'], function () {
     Route::get('/reports', [ReportController::class, 'index'])->name('admin.reports.index');
     Route::post('/reports/get_all', [ReportController::class, 'getAllLogs'])->name('admin.reports.getAllLogs');
     Route::post('/reports/get_customized', [ReportController::class, 'getCategorized'])->name('admin.reports.getCategorized');
+
+    Route::get('/reports/export_all/{data}', [ExportController::class, 'exportAll'])->name('admin.reports.exportAll');
+    Route::post('/reports/export_customized', [ExportController::class, 'exportCustomized'])->name('admin.reports.exportCustomized');
 
 });

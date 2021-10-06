@@ -6,8 +6,8 @@
         </div>
         <div class="main-header-center">
             <div class="responsive-logo">
-                <a href="#"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
-                <a href="#"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo-dark" alt="logo"></a>
+                <a href="{{route('dashboard')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
+                <a href="{{route('dashboard')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo-dark" alt="logo"></a>
             </div>
         </div>
         <div class="main-header-right">
