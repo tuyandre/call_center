@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ebec19b-c483-4e05-8ae4-fe766110f97a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/call_center.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/call_center.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/report_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/report_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/asm89/stack-cors/" />
     <ignored path="$PROJECT_DIR$/vendor/brick/math/" />
@@ -254,10 +236,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/includes/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
+            <state relative-caret-position="-170">
               <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
             </state>
           </provider>
@@ -302,11 +284,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+            <state relative-caret-position="-408">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -477,8 +459,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/report_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+            <state relative-caret-position="34">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="18" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -556,14 +538,14 @@
         <option value="$PROJECT_DIR$/resources/views/backend/report.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/report_list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ExportController.php" />
         <option value="$PROJECT_DIR$/app/Exports/AllReportExport.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/includes/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/report_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php" />
       </list>
     </option>
   </component>
@@ -687,7 +669,7 @@
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="170" />
     <option name="y" value="91" />
     <option name="width" value="1026" />
@@ -851,12 +833,12 @@
       <workItem from="1632318266146" duration="596000" />
       <workItem from="1632938721692" duration="4743000" />
       <workItem from="1633219366957" duration="15987000" />
-      <workItem from="1633531740897" duration="660000" />
+      <workItem from="1633531740897" duration="1241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43644000" />
+    <option name="totallyTimeSpent" value="44225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1016,13 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3927">
@@ -1137,13 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/report_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
@@ -1190,8 +1158,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/includes/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
+        <state relative-caret-position="-170">
           <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/report_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/customized_reports.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
