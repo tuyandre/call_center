@@ -10,9 +10,9 @@
 @section('content_title','SYSTEM Reports')
 @section('content_target','Reports')
 @section('action_buttons')
-    <button type="button"  target="_blank" class="btn btn-secondary my-2 btn-icon-text" id="report_export">
-        <i class="fe fe-download-cloud mr-2"></i> Export Report
-    </button>
+{{--    <button type="button"  target="_blank" class="btn btn-secondary my-2 btn-icon-text" id="report_export">--}}
+{{--        <i class="fe fe-download-cloud mr-2"></i> Export Report--}}
+{{--    </button>--}}
 
 @endsection
 @section('contents')

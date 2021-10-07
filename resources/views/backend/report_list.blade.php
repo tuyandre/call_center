@@ -10,13 +10,13 @@
 @section('content_title','SYSTEM Reports')
 @section('content_target','Reports')
 @section('action_buttons')
-    <?php
-    $vars = array('start_date'=>$start_date,'end_date'=>$end_date);
-    $qs = http_build_query($vars);
-    ?>
-    <a type="button" href="{{route('admin.reports.exportAll',['data'=>$qs])}}"  target="_blank" class="btn btn-secondary my-2 btn-icon-text" id="report_exportqwe">
-        <i class="fe fe-download-cloud mr-2"></i> Export Report
-    </a>
+{{--    <?php--}}
+{{--    $vars = array('start_date'=>$start_date,'end_date'=>$end_date);--}}
+{{--    $qs = http_build_query($vars);--}}
+{{--    ?>--}}
+{{--    <a type="button" href="{{route('admin.reports.exportAll',['data'=>$qs])}}"  target="_blank" class="btn btn-secondary my-2 btn-icon-text" id="report_exportqwe">--}}
+{{--        <i class="fe fe-download-cloud mr-2"></i> Export Report--}}
+{{--    </a>--}}
 
 @endsection
 @section('contents')
