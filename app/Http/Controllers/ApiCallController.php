@@ -23,6 +23,6 @@ class ApiCallController extends Controller
                'duration' => $request->duration,
            ]);
        }
-       return response()->json(['calls' => $calls], 200);
+       return response()->json(['calls' => "done"], 200);
    }
 }
