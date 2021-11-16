@@ -7,8 +7,8 @@
     <link href="{{asset('/public/dashboard/assets/plugins/datatable/responsivebootstrap4.min.css')}}" rel="stylesheet" />
     <link href="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css')}}" rel="stylesheet" />
 @endsection
-@section('content_title','SYSTEM CALLS')
-@section('content_target','OUTGOING CALLS')
+@section('content_title','SYSTEM CALLS ')
+@section('content_target',' CALLS DETAIL')
 @section('contents')
 
 
@@ -18,7 +18,7 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
-                        <h6 class="main-content-label mb-1">Outgoing Calls List</h6>
+                        <h6 class="main-content-label mb-1">All Calls for This Client</h6>
 
                     </div>
                     <div class="table-responsive table-hover">
@@ -30,7 +30,7 @@
                                 <th class="wd-20p">Client Name</th>
                                 <th class="wd-20p">Date</th>
                                 <th class="wd-20p">Duration</th>
-                                <th class="wd-20p">Action</th>
+                                <th class="wd-20p">Type</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -50,7 +50,10 @@
 @section('js')
 
     <script>
-        var defaultUrl = "{{ route('admin.calls.getOutgoingCalls') }}";
+        var defaultUrl = "{{ route('admin.calls.getCallDetail', ":phone") }}";
+        var iid ="{{$call}}";
+        console.log("Dataaaa::"+iid);
+        defaultUrl = defaultUrl.replace(':phone',iid);
         var table;
         var manageTable = $("#CallTable");
         function myFunc() {
@@ -65,18 +68,7 @@
                     {data: 'client_name'},
                     {data: 'date'},
                     {data: 'duration'},
-                    {
-                        data: 'client_phone',
-                        render: function (data, type, row) {
-                            var url_more = '{{ route("admin.calls.callDetail", ":id") }}';
-                            url_more = url_more.replace(':id', row.client_phone);
-
-                            return"<a  href='"+url_more+"' class='btn btn-info btn-sm btn-flat js-detail' data-id='" + data +
-                                "' > <i class='fa fa-eye'></i>View</a>";
-
-
-                        }
-                    }
+                    {data: 'type'}
                 ]
             });
         }

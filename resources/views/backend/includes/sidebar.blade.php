@@ -17,7 +17,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#"><span class="shape1"></span>
+                <a class="nav-link" href="{{route('admin.users.allUsers')}}"><span class="shape1"></span>
                     <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">ALL USERS</span></a>
             </li>
             <li class="nav-item">

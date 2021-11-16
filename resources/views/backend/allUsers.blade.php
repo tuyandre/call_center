@@ -7,8 +7,15 @@
     <link href="{{asset('/public/dashboard/assets/plugins/datatable/responsivebootstrap4.min.css')}}" rel="stylesheet" />
     <link href="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css')}}" rel="stylesheet" />
 @endsection
-@section('content_title','SYSTEM CALLS')
-@section('content_target','OUTGOING CALLS')
+@section('content_title','SYSTEM USERS')
+@section('content_target','All USERS')
+@section('action_buttons')
+
+        <a type="button" href="{{route('admin.users.createUser')}}"  class="btn btn-info my-2 btn-icon-text" id="report_exportqwe">
+            <i class="fe fe-user-plus mr-2"></i> Add User
+        </a>
+
+@endsection
 @section('contents')
 
 
@@ -18,19 +25,16 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
-                        <h6 class="main-content-label mb-1">Outgoing Calls List</h6>
+                        <h6 class="main-content-label mb-1">All Users List</h6>
 
                     </div>
                     <div class="table-responsive table-hover">
                         <table class="table" id="CallTable">
                             <thead>
                             <tr>
-                                <th class="wd-20p">Caller Id</th>
-                                <th class="wd-20p">Client Phone</th>
-                                <th class="wd-20p">Client Name</th>
-                                <th class="wd-20p">Date</th>
-                                <th class="wd-20p">Duration</th>
-                                <th class="wd-20p">Action</th>
+                                <th class="wd-20p">User Name</th>
+                                <th class="wd-20p">User Email</th>
+                                <th class="wd-20p">User Username</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -50,33 +54,19 @@
 @section('js')
 
     <script>
-        var defaultUrl = "{{ route('admin.calls.getOutgoingCalls') }}";
+        var defaultUrl = "{{ route('admin.users.getAllUsers') }}";
         var table;
         var manageTable = $("#CallTable");
         function myFunc() {
             table = manageTable.DataTable({
                 ajax: {
                     url: defaultUrl,
-                    dataSrc: 'calls'
+                    dataSrc: 'users'
                 },
                 columns: [
-                    {data: 'caller_id'},
-                    {data: 'client_phone'},
-                    {data: 'client_name'},
-                    {data: 'date'},
-                    {data: 'duration'},
-                    {
-                        data: 'client_phone',
-                        render: function (data, type, row) {
-                            var url_more = '{{ route("admin.calls.callDetail", ":id") }}';
-                            url_more = url_more.replace(':id', row.client_phone);
-
-                            return"<a  href='"+url_more+"' class='btn btn-info btn-sm btn-flat js-detail' data-id='" + data +
-                                "' > <i class='fa fa-eye'></i>View</a>";
-
-
-                        }
-                    }
+                    {data: 'name'},
+                    {data: 'email'},
+                    {data: 'username'}
                 ]
             });
         }

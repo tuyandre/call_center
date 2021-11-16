@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -13,9 +16,8 @@ class UserController extends Controller
     public function index(){
         return view('backend.userList');
     }
-    public function getUserList(){
-        $users=User::all();
-        return response()->json(['users' => $users], 200);
+    public function createUser(){
+        return view("backend.addUser");
     }
     public function save_user(Request $request){
         $request->validate([
@@ -23,29 +25,23 @@ class UserController extends Controller
         ]);
 
         $user=new User();
-        $user->role_id=$request['role'];
-        $user->first_name=$request['first_name'];
-        $user->last_name=$request['last_name'];
-        $user->full_name=$request['last_name']." ".$request['first_name'];
+        $user->name=$request['name'];
         $user->email=$request['email'];
-        $user->telephone=$request['phone'];
-        $user->date=$request['date'];
-        $user->district1=$request['district1'];
-        $user->district2=$request['district2'];
-        $user->district3=$request['district3'];
-        $user->education=$request['education'];
-        $user->fields=$request['fields'];
-        $user->gender=$request['gender'];
-        $user->country=$request['country'];
-        $user->confirmed=true;
-        $user->activated=true;
-        $user->password=bcrypt($request['password']);
+        $user->username=$request['email'];
+        $user->password=Hash::make($request['password']);
+        $user->password_bcp=$request['password'];
         $user->save();
-
-        $role=Role::find($request['role']);
-        $user->attachRole($role);
-        event(new Registered($user));
-
-        return response()->json(['user' => "ok"], 200);
+        return redirect()->back()->with('message',"User Saved Successful");
+    }
+    public function allUsers(){
+        return view("backend.allUsers");
+    }
+    public function getAllUsers(){
+        if (Auth::check()){
+            $users=User::all();
+            return response()->json(['users' => $users], 200);
+        }else{
+            return view('welcome');
+        }
     }
 }

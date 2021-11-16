@@ -56,4 +56,17 @@ class CallController extends Controller
         }
 
     }
+    public function callDetail($id){
+        return view('backend.callDetail',["call"=>$id])->with("call",$id);
+
+    }
+    public function getCallDetail($id){
+        if (Auth::check()){
+            $calls=CallLogs::where('client_phone','=',$id)->get();
+            return response()->json(['calls' => $calls], 200);
+        }else{
+            return view('welcome');
+        }
+
+    }
 }

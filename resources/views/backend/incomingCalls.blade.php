@@ -66,10 +66,10 @@
                     {data: 'date'},
                     {data: 'duration'},
                     {
-                        data: 'id',
+                        data: 'client_phone',
                         render: function (data, type, row) {
                             var url_more = '{{ route("admin.calls.callDetail", ":id") }}';
-                            url_more = url_more.replace(':id', row.id);
+                            url_more = url_more.replace(':id', row.client_phone);
 
                             return"<a  href='"+url_more+"' class='btn btn-info btn-sm btn-flat js-detail' data-id='" + data +
                                 "' > <i class='fa fa-eye'></i>View</a>";

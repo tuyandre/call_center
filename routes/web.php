@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CallController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,7 +47,13 @@ Route::group(['prefix' => '/home/'], function () {
     Route::get('get/Outgoing_calls', [CallController::class, 'getOutgoingCalls'])->name('admin.calls.getOutgoingCalls');
 
     Route::get('calls/callDetail/{id}', [CallController::class, 'callDetail'])->name('admin.calls.callDetail');
+    Route::get('getCalls/Detail/{phone}', [CallController::class, 'getCallDetail'])->name('admin.calls.getCallDetail');
 
+
+    Route::get('/All_users', [UserController::class, 'allUsers'])->name('admin.users.allUsers');
+    Route::get('get/All_users', [UserController::class, 'getAllUsers'])->name('admin.users.getAllUsers');
+    Route::get('/add_User', [UserController::class, 'createUser'])->name('admin.users.createUser');
+    Route::post('/save/store_user', [UserController::class, 'save_user'])->name('admin.users.save_user');
 
 
 
