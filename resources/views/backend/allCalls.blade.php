@@ -25,7 +25,7 @@
                         <table class="table" id="CallTable">
                             <thead>
                             <tr>
-                                <th class="wd-20p">Caller Id</th>
+{{--                                <th class="wd-20p">Caller Id</th>--}}
                                 <th class="wd-20p">Client Phone</th>
                                 <th class="wd-20p">Client Name</th>
                                 <th class="wd-25p">Type</th>
@@ -61,7 +61,6 @@
                     dataSrc: 'calls'
                 },
                 columns: [
-                    {data: 'caller_id'},
                     {data: 'client_phone'},
                     {data: 'client_name'},
                     {data: 'type'},

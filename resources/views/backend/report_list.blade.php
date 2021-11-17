@@ -35,7 +35,7 @@
                         <table class="table" id="CallTable">
                             <thead>
                             <tr>
-                                <th class="wd-20p">Caller Id</th>
+{{--                                <th class="wd-20p">Caller Id</th>--}}
                                 <th class="wd-20p">Client Phone</th>
                                 <th class="wd-20p">Client Name</th>
                                 <th class="wd-25p">Type</th>
@@ -46,7 +46,7 @@
                             <tbody>
                             @foreach($calls as $call)
                                 <tr>
-                                <td>{{$call->caller_id}}</td>
+{{--                                <td>{{$call->caller_id}}</td>--}}
                                 <td>{{$call->client_phone}}</td>
                                 <td>{{$call->client_name}}</td>
                                 <td>{{$call->type}}</td>
