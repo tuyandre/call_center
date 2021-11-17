@@ -45,12 +45,14 @@
                             </thead>
                             <tbody>
                             @foreach($calls as $call)
+                                <tr>
                                 <td>{{$call->caller_id}}</td>
                                 <td>{{$call->client_phone}}</td>
                                 <td>{{$call->client_name}}</td>
                                 <td>{{$call->type}}</td>
                                 <td>{{$call->date}}</td>
                                 <td>{{$call->duration}}</td>
+                                </tr>
                                 @endforeach
 
                             </tbody>

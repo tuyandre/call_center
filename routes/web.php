@@ -59,7 +59,7 @@ Route::group(['prefix' => '/home/'], function () {
 
     Route::get('/reports', [ReportController::class, 'index'])->name('admin.reports.index');
     Route::post('/reports/get_all', [ReportController::class, 'getAllLogs'])->name('admin.reports.getAllLogs');
-    Route::post('/reports/get_customized', [ReportController::class, 'getCategorized'])->name('admin.reports.getCategorized');
+    Route::post('/reports/customized_report', [ReportController::class, 'getCategorized'])->name('admin.reports.getCategorized');
 
     Route::get('/reports/export_all/{data}', [ExportController::class, 'exportAll'])->name('admin.reports.exportAll');
     Route::post('/reports/export_customized', [ExportController::class, 'exportCustomized'])->name('admin.reports.exportCustomized');
