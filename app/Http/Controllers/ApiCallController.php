@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ApiCallController extends Controller
 {
    public function store(Request $request){
-       return response()->json(['calls' => $request->all()], 200);
+//       return response()->json(['calls' => $request->all()], 200);
 //       return response()->json(['calls' => $request->client_phone], 200);
        $check=CallLogs::where('client_phone','=',$request->client_phone)
                         ->where('date','=',$request->date)
@@ -23,6 +23,6 @@ class ApiCallController extends Controller
                'duration' => $request->duration,
            ]);
        }
-       return response()->json(['calls' => $request->all()], 200);
+       return response()->json(['calls' => "Done Successfully"], 200);
    }
 }
