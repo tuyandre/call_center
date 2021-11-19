@@ -28,7 +28,7 @@
                                 <label class="mg-b-0">Start Date</label>
                             </div>
                             <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                <input class="form-control" placeholder="Start Date" type="date" required name="start_date" value="<?php today() ?>">
+                                <input class="form-control" placeholder="Start Date" type="datetime-local" required name="start_date" value="<?php today() ?>">
                             </div>
                         </div>
                         <div class="row row-xs align-items-center mg-b-20">
@@ -36,7 +36,7 @@
                                 <label class="mg-b-0">End Date</label>
                             </div>
                             <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                <input class="form-control" required name="end_date" placeholder="End Date" type="date">
+                                <input class="form-control" required name="end_date" placeholder="End Date" type="datetime-local">
                             </div>
                         </div>
                         <div class="form-group row justify-content-end mb-0">
@@ -82,7 +82,7 @@
                                 <label class="mg-b-0">Start Date</label>
                             </div>
                             <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                <input class="form-control" placeholder="Start Date" type="date" required name="start_date" value="<?php today() ?>">
+                                <input class="form-control" placeholder="Start Date" type="datetime-local" required name="start_date" value="<?php today() ?>">
                             </div>
                         </div>
                         <div class="row row-xs align-items-center mg-b-20">
@@ -90,7 +90,7 @@
                                 <label class="mg-b-0">End Date</label>
                             </div>
                             <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                <input class="form-control" required name="end_date" placeholder="End Date" type="date">
+                                <input class="form-control" required name="end_date" placeholder="End Date" type="datetime-local">
                             </div>
                         </div>
                         <div class="form-group row justify-content-end mb-0">
