@@ -22,7 +22,7 @@
     <link href="{{asset('/public/dashboard/assets/plugins/web-fonts/icons.css')}}" rel="stylesheet"/>
     <link href="{{asset('/public/dashboard/assets/plugins/web-fonts/font-awesome/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('/public/dashboard/assets/plugins/web-fonts/plugin.css')}}" rel="stylesheet"/>
-
+    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/flaticon.css')}}">
     <!-- Style css-->
     <link href="{{asset('/public/dashboard/assets/css/style/style.css')}}" rel="stylesheet">
     <link href="{{asset('/public/dashboard/assets/css/skins.css')}}" rel="stylesheet">
