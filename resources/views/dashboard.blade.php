@@ -132,7 +132,8 @@
                             <img src="{{asset('/public/dashboard/assets/img/end-call.jpg')}}" alt="">
                         </div>
                         <div class="card-item-title  mb-2">
-                            <label class="main-content-label tx-13 font-weight-bold mb-1">RESPONSIVENESS RATE</label>	<span class="d-block tx-12 mb-0 text-muted">Unsupported Calls</span>
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">RESPONSIVENESS RATE</label>
+                            <span class="d-block tx-12 mb-0 text-muted">Responsiveness Rate</span>
                         </div>
                         <div class="card-item-body">
                             <?php $missed=new \App\Responsiveness();
@@ -142,8 +143,9 @@
 
                             ?>
                             <div class="card-item-stat">
-                                <h4 class="font-weight-bold">{{$responsess}}</h4>
-                                <small><b class="text-danger"></b> {{$missed->getPercentage($mis->count(),$responsess)}}%</small>
+                                <h4 class="font-weight-bold"> {{ intval( $missed->getPercentage($mis->count(),$responsess))}}%</h4>
+                                <small><b class="text-danger"></b> {{$responsess}} </small>
+                                <span class="d-block tx-12 mb-0 text-muted">Unsupported Calls</span>
                             </div>
                         </div>
                     </div>
