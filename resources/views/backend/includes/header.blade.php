@@ -71,38 +71,6 @@
     <div class="mb-1 navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
             <div class="d-flex order-lg-2 ml-auto">
-                <div class="dropdown header-search">
-                    <a class="nav-link icon header-search">
-                        <i class="fe fe-search header-icons"></i>
-                    </a>
-{{--                    <div class="dropdown-menu">--}}
-{{--                        <div class="main-form-search p-2">--}}
-{{--                            <div class="input-group">--}}
-{{--                                <div class="input-group-btn search-panel">--}}
-{{--                                    <select class="form-control select2-no-search">--}}
-{{--                                        <option label="All categories">--}}
-{{--                                        </option>--}}
-{{--                                        <option value="IT Projects">--}}
-{{--                                            IT Projects--}}
-{{--                                        </option>--}}
-{{--                                        <option value="Business Case">--}}
-{{--                                            Business Case--}}
-{{--                                        </option>--}}
-{{--                                        <option value="Microsoft Project">--}}
-{{--                                            Microsoft Project--}}
-{{--                                        </option>--}}
-{{--                                        <option value="Risk Management">--}}
-{{--                                            Risk Management--}}
-{{--                                        </option>--}}
-{{--                                        <option value="Team Building">--}}
-{{--                                            Team Building--}}
-{{--                                        </option>--}}
-{{--                                    </select>--}}
-{{--                                </div>--}}
-{{--                           </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-                </div>
                 <div class="dropdown ">
                     <a class="nav-link icon full-screen-link">
                         <i class="fe fe-maximize fullscreen-button fullscreen header-icons"></i>
@@ -119,9 +87,14 @@
                             <p class="main-notification-text">{{Auth::user()->email}}</p>
                         </div>
 
-                        <a class="dropdown-item" href="signin.html">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                             <i class="fe fe-power"></i> Sign Out
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                              style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </div>
                 </div>
                 <div class="dropdown  header-settings">
