@@ -144,8 +144,8 @@
                             ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold"> {{ intval( $missed->getPercentage($mis->count(),$responsess))}}%</h4>
-                                <small><b class="text-danger"></b> {{$responsess}} </small>
-                                <span class="d-block tx-12 mb-0 text-muted">Unsupported Calls</span>
+                                <small><b class="text-danger"><strong> {{$responsess}}</strong></b>  Unsupported Calls</small>
+{{--                                <span class="d-block tx-12 mb-0 text-muted">Unsupported Calls</span>--}}
                             </div>
                         </div>
                     </div>
