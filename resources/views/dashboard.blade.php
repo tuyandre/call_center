@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/accept.PNG')}}" alt="">
+                            <img src="{{asset('/public/dashboard/assets/img/accept.png')}}" alt="">
                         </div>
                         <div class="card-item-title mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">Total Calls</label>
@@ -63,7 +63,7 @@
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/incoming.PNG')}}" alt="">
+                            <img src="{{asset('/public/dashboard/assets/img/incoming.png')}}" alt="">
                         </div>
                         <div class="card-item-title mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">Incoming Calls</label>
@@ -107,7 +107,7 @@
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/missed.PNG')}}" alt="">
+                            <img src="{{asset('/public/dashboard/assets/img/missed.png')}}" alt="">
                         </div>
                         <div class="card-item-title  mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">All Missed Calls</label>	<span class="d-block tx-12 mb-0 text-muted">All Missed Calls</span>

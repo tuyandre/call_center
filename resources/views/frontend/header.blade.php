@@ -93,58 +93,58 @@
         </div>
     </div>
     <!-- banner start -->
-{{--    <div class="cc_banner">--}}
-{{--        <div class="owl-carousel owl-theme">--}}
-{{--            <div class="item owl-item1">--}}
-{{--                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">--}}
-{{--                    <div class="caption">--}}
-{{--                        <div class="container">--}}
+    <div class="cc_banner">
+        <div class="owl-carousel owl-theme">
+            <div class="item owl-item1">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">
+                    <div class="caption">
+                        <div class="container">
 
-{{--                            <div id="typed-strings">--}}
-{{--                                <h1>Welcome to <i>ISHYIGA CALL CENTER</i></h1>--}}
-{{--                            </div>--}}
-{{--                            <div class="typing_text">--}}
-{{--                                <span id="typed"></span>--}}
-{{--                            </div>--}}
+                            <div id="typed-strings">
+                                <h1>Welcome to <i>ISHYIGA CALL CENTER</i></h1>
+                            </div>
+                            <div class="typing_text">
+                                <span id="typed"></span>
+                            </div>
 
-{{--                            <h1>Thanks for Bringing this to Our Attention</h1>--}}
+                            <h1>Thanks for Bringing this to Our Attention</h1>
 
-{{--                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">--}}
-{{--                                <div class="row">--}}
-{{--                                    <form class="b">--}}
-{{--                                        <input type="search" name="search" value="" placeholder="KEYWORD" class="form-control">--}}
-{{--                                        <button type="button" class="search_btn">search</button>--}}
-{{--                                    </form>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
+                                <div class="row">
+                                    <form class="b">
+                                        <input type="search" name="search" value="" placeholder="KEYWORD" class="form-control">
+                                        <button type="button" class="search_btn">search</button>
+                                    </form>
+                                </div>
+                            </div>
 
-{{--                        </div>--}}
+                        </div>
 
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="item owl-item2">--}}
-{{--                <div class="container">--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">--}}
-{{--                            <div class="caption">--}}
-{{--                                <h1 class="b">Find articles , help , and advice <br> for getting the most out of <span>ISHYIGA SOFTWARE</span></h1>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="item owl-item3">--}}
-{{--                <div class="container">--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">--}}
-{{--                            <div class="caption">--}}
-{{--                                <h1 class="a">always available<br> for our customers</h1>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+                    </div>
+                </div>
+            </div>
+            <div class="item owl-item2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">
+                            <div class="caption">
+                                <h1 class="b">Find articles , help , and advice <br> for getting the most out of <span>ISHYIGA SOFTWARE</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item owl-item3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">
+                            <div class="caption">
+                                <h1 class="a">always available<br> for our customers</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
