@@ -39,6 +39,11 @@ class Responsiveness
         return $count;
     }
  public function getPercentage($total,$respo){
+        if ($total>0){
+            return(($respo*100)/$total);
+        }else{
+            return 0;
+        }
         return(($respo*100)/$total);
  }
     public function getMissedResponsivenessFilter($startDate,$endDate){
