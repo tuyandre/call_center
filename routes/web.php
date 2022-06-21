@@ -34,6 +34,7 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 Route::group(['prefix' => '/home/'], function () {
 
+    Route::get('/All_callsPagination', [CallController::class, 'allCallsPagination'])->name('admin.calls.allCallsPagination');
     Route::get('/All_calls', [CallController::class, 'allCalls'])->name('admin.calls.allCalls');
     Route::get('get/All_calls', [CallController::class, 'getAllCalls'])->name('admin.calls.getAllCalls');
 
@@ -54,6 +55,7 @@ Route::group(['prefix' => '/home/'], function () {
     Route::get('get/All_users', [UserController::class, 'getAllUsers'])->name('admin.users.getAllUsers');
     Route::get('/add_User', [UserController::class, 'createUser'])->name('admin.users.createUser');
     Route::post('/save/store_user', [UserController::class, 'save_user'])->name('admin.users.save_user');
+    Route::post('/save/store_user', [UserController::class, 'save_user'])->name('admin.users.save_user');
 
 
 
@@ -64,4 +66,5 @@ Route::group(['prefix' => '/home/'], function () {
     Route::get('/reports/export_all/{data}', [ExportController::class, 'exportAll'])->name('admin.reports.exportAll');
     Route::post('/reports/export_customized', [ExportController::class, 'exportCustomized'])->name('admin.reports.exportCustomized');
 
+    Route::post('/filter/ranger_filter', [CallController::class, 'FilterDate'])->name('admin.filter.date');
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CallLogs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CallController extends Controller
 {
@@ -68,5 +69,18 @@ class CallController extends Controller
             return view('welcome');
         }
 
+    }
+    public function FilterDate(Request $request){
+//        $data=array('startDate'=>$request['start_date'], 'endDate'=>$request['end_date']);
+
+        return view('dashboard2',['start_data'=>$request['start_date'],'end_date'=>$request['end_date']]);
+
+
+    }
+    public function allCallsPagination()
+    {
+//        $data = CallLogs::paginate(20);
+        $data = DB::table('call_logs')->orderBy('date', 'desc')->paginate(20);
+        return view('backend.allCallsPagination',compact('data'));
     }
 }

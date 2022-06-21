@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="img/png" href="{{asset('public/frontend/img/logo-company.png')}}">
 
     <!-- Title -->
-    <title>@yield('title') | ERS|DashBoard</title>
+    <title>@yield('title') | ISHYIGA|CALLCENTER</title>
 
     <!-- Bootstrap css-->
     <link href="{{asset('/public/dashboard/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"/>
@@ -46,6 +46,9 @@
     <!-- Switcher css-->
     <link href="{{asset('/public/dashboard/assets/switcher/css/switcher.css')}}" rel="stylesheet">
     <link href="{{asset('/public/dashboard/assets/switcher/demo.css')}}" rel="stylesheet">
+
+
+
     @yield('css')
 </head>
 
@@ -93,14 +96,11 @@
 
 
 
-
-
 <!-- Back-to-top -->
 <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
 
 <!-- Jquery js-->
 <script src="{{asset('/public/dashboard/assets/plugins/jquery/jquery.min.js')}}"></script>
-
 <!-- Bootstrap js-->
 <script src="{{asset('/public/dashboard/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
 <script src="{{asset('/public/dashboard/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -144,6 +144,8 @@
 <script src="{{asset('/public/dashboard/assets/switcher/js/switcher.js')}}"></script>
 <script src="{{ asset('/public/parsleyjs/js/parsley.min.js') }}" ></script>
 <script src="{{ asset('/public/js/bootbox.min.js') }}" ></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 @yield('js')
 </body>
 </html>

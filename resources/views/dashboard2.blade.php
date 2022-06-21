@@ -1,120 +1,22 @@
-{{--@extends('frontend.master')--}}
-
-{{--@section('title','HOME')--}}
-{{--@section('css')--}}
-
-
-
-{{--@endsection--}}
-{{--@section('content')--}}
-
-{{--    <!-- service section start -->--}}
-{{--    <div data-section-scroll='2'>--}}
-{{--        <div class="cc_service cc_toppadder80 cc_bottompadder50">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
-{{--                        <div class="cc_heading cc_bottompadder50">--}}
-{{--                            <h6>STATISTIC</h6>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">--}}
-{{--                        <div class="service_section">--}}
-{{--                            <div class="service_top">--}}
-{{--                                <img src="{{asset('/public/dashboard/assets/img/accept.png')}}" alt="" style="height: 65px">--}}
-{{--                            </div>--}}
-{{--                            <h3>ALL CALLS</h3>--}}
-{{--                            <p>These are all calls for our call Center.</p>--}}
-{{--                            <a href="{{route('login')}}" type="button" class="cc_btn">view more</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">--}}
-{{--                        <div class="service_section">--}}
-{{--                            <div class="service_top">--}}
-{{--                                <i class="flaticon-chat"></i>--}}
-{{--                            </div>--}}
-{{--                            <h3>Live Chat</h3>--}}
-{{--                            <p>I sink under the weight of the splendour of these visions. A wonderful serenity Which for the bliss of souls like mine.</p>--}}
-{{--                            <button type="button" class="cc_btn">view more</button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">--}}
-{{--                        <div class="service_section">--}}
-{{--                            <div class="service_top">--}}
-{{--                                <i class="flaticon-letter"></i>--}}
-{{--                            </div>--}}
-{{--                            <h3>Email Support</h3>--}}
-{{--                            <p>I sink under the weight of the splendour of these visions. A wonderful serenity Which for the bliss of souls like mine.</p>--}}
-{{--                            <button type="button" class="cc_btn">view more</button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">--}}
-{{--                        <div class="service_section">--}}
-{{--                            <div class="service_top">--}}
-{{--                                <i class="flaticon-video-camera"></i>--}}
-{{--                            </div>--}}
-{{--                            <h3>Help Videos</h3>--}}
-{{--                            <p>I sink under the weight of the splendour of these visions. A wonderful serenity Which for the bliss of souls like mine.</p>--}}
-{{--                            <button type="button" class="cc_btn">view more</button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">--}}
-{{--                        <div class="service_section">--}}
-{{--                            <div class="service_top">--}}
-{{--                                <i class="flaticon-call-center-girl"></i>--}}
-{{--                            </div>--}}
-{{--                            <h3>Call Center</h3>--}}
-{{--                            <p>I sink under the weight of the splendour of these visions. A wonderful serenity Which for the bliss of souls like mine.</p>--}}
-{{--                            <button type="button" class="cc_btn">view more</button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">--}}
-{{--                        <div class="service_section">--}}
-{{--                            <div class="service_top">--}}
-{{--                                <i class="flaticon-exam"></i>--}}
-{{--                            </div>--}}
-{{--                            <h3>Optimization</h3>--}}
-{{--                            <p>I sink under the weight of the splendour of these visions. A wonderful serenity Which for the bliss of souls like mine.</p>--}}
-{{--                            <button type="button" class="cc_btn">view more</button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-
-
-
-{{--@endsection--}}
-{{--@section('js')--}}
-
-{{--@endsection--}}
-
-
-
-
-@extends('frontend.includes.master')
+@extends('backend.includes.master')
 
 @section('title','Home')
 @section('content_title','SYSTEM DASHBOARD')
 @section('content_target','DASHBOARD')
 @section('css')
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 @endsection
 @section('contents')
-
 <?php
 
 //use Carbon\Carbon;
 
-$endDate = Carbon\Carbon::now();
-$endDate2 = Carbon\Carbon::now();
-$startDate = $endDate2->firstOfMonth();
+$endDate = date('Y-m-d h:m:s', strtotime($end_date));
+$startDate = date('Y-m-d h:m:s', strtotime($start_data));
 
 ?>
     <div class="row row-sm">
-        <div class="col-sm-12 col-lg-12 col-xl-8">
+        <div class="col-sm-8 col-lg-8 col-xl-8">
             <!--Row-->
             <div class="row row-sm  mt-lg-4">
                 <div class="col-sm-12 col-lg-12 col-xl-12">
@@ -123,11 +25,37 @@ $startDate = $endDate2->firstOfMonth();
                             <div class="row align-items-center">
                                 <div class="offset-xl-3 offset-sm-6 col-xl-8 col-sm-6 col-12 img-bg ">
                                     <h4 class="d-flex  mb-3">
-                                        <span class="font-weight-bold text-white "></span>
+                                        <span class="font-weight-bold text-white ">{{Auth::user()->name}}</span>
                                     </h4>
-                                    <p class="tx-white-7 mb-1">WELCOME ON ISHYIGA CALL CENTER SYSTEM  </div>
+                                    <p class="tx-white-7 mb-1">WELCOME ON ISHYIGA CALL CENTER SYSTEM  <b class="text-warning">&</b> <br> <strong>{{Auth::user()->email}}</strong></div>
                                 <img src="{{asset('/public/dashboard/assets/img/pngs/work3.png')}}" alt="user-img" class="wd-200">
                             </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Row -->
+        </div>
+
+        <div class="col-sm-4 col-lg-4 col-xl-4">
+            <!--Row-->
+            <div class="row row-sm  mt-lg-4">
+                <div class="col-sm-12 col-lg-12 col-xl-12">
+                    <div class="card bg-primary custom-card card-box">
+                        <div class="card-body p-4">
+                            <form action="{{route('admin.filter.date')}}" method="post">
+                                @csrf
+                                <div class="row align-items-center">
+                                    <div class="input-group input-daterange">
+                                        <input type="datetime-local" class="form-control" name="start_date" value="2012-04-05">
+                                        <div class="input-group-addon">to</div>
+                                        <input type="datetime-local" class="form-control" name="end_date" value="2012-04-19">
+                                        <input type="submit" class="btn btn-info" value="Filter">
+                                    </div>
+
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -139,9 +67,10 @@ $startDate = $endDate2->firstOfMonth();
 
 
 
+
     <!--Row-->
     <div class="row row-sm">
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
             <div class="card custom-card">
                 <div class="card-body">
                     <div class="card-item">
@@ -153,7 +82,6 @@ $startDate = $endDate2->firstOfMonth();
                             <span class="d-block tx-12 mb-0 text-muted">Total All Calls</span>
                         </div>
                         <div class="card-item-body">
-<!--                            --><?php //$calls=\App\Models\CallLogs::whereBetween('created_at', [$startDate, $endDate])->get(); ?>
                             <?php $calls=\App\Models\CallLogs::all()->whereBetween('date', [$startDate, $endDate]); ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold">{{$calls->count()}}</h4>
@@ -164,7 +92,7 @@ $startDate = $endDate2->firstOfMonth();
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
             <div class="card custom-card">
                 <div class="card-body">
                     <div class="card-item">
@@ -186,7 +114,7 @@ $startDate = $endDate2->firstOfMonth();
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
             <div class="card custom-card">
                 <div class="card-body">
                     <div class="card-item">
@@ -208,7 +136,7 @@ $startDate = $endDate2->firstOfMonth();
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
             <div class="card custom-card">
                 <div class="card-body">
                     <div class="card-item">
@@ -229,7 +157,7 @@ $startDate = $endDate2->firstOfMonth();
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
             <div class="card custom-card">
                 <div class="card-body">
                     <div class="card-item">
@@ -242,16 +170,14 @@ $startDate = $endDate2->firstOfMonth();
                             <span class="d-block tx-12 mb-0 text-muted">Responsiveness Rate</span>
                         </div>
                         <div class="card-item-body">
-                            <?php $missed=new \App\Responsiveness();
-                            $responsess=$missed->getMissedResponsiveness();
-
-                            //                            $rate=($response*100)/$mis;
+                        <?php $missed=new \App\Responsiveness();
+                            $responsess=$missed->getMissedResponsiveness($startDate,$endDate);
 
                             ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold"> {{ intval( $missed->getPercentage($mis->count(),$responsess))}}%</h4>
                                 <small><b class="text-danger"><strong> {{$responsess}}</strong></b>  Unsupported Calls</small>
-                                {{--                                <span class="d-block tx-12 mb-0 text-muted">Unsupported Calls</span>--}}
+                                <span class="d-block tx-12 mb-0 text-muted">Unsupported Calls</span>
                             </div>
                         </div>
                     </div>
@@ -265,7 +191,6 @@ $startDate = $endDate2->firstOfMonth();
 
 @endsection
 @section('js')
-
 
 @endsection
 
