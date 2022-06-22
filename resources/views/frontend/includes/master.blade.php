@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="img/png" href="{{asset('public/frontend/img/logo-company.png')}}">
 
     <!-- Title -->
-    <title>@yield('title') | ERS|DashBoard</title>
+    <title>@yield('title') | CALLCENTER</title>
 
     <!-- Bootstrap css-->
     <link href="{{asset('/public/dashboard/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"/>

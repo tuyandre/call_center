@@ -97,8 +97,8 @@
 @extends('frontend.includes.master')
 
 @section('title','Home')
-@section('content_title','SYSTEM DASHBOARD')
-@section('content_target','DASHBOARD')
+@section('content_title','ISHYIGA')
+@section('content_target','ISHYIGA')
 @section('css')
 
 @endsection
