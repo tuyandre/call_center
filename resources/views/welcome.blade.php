@@ -96,7 +96,7 @@
 
 @extends('frontend.includes.master')
 
-@section('title','Home')
+@section('title','ISHYIGA')
 @section('content_title','ISHYIGA')
 @section('content_target','ISHYIGA')
 @section('css')
