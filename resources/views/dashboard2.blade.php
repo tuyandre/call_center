@@ -11,8 +11,10 @@
 
 //use Carbon\Carbon;
 
-$endDate = date('Y-m-d h:m:s', strtotime($end_date));
-$startDate = date('Y-m-d h:m:s', strtotime($start_data));
+//$endDate = date('Y-m-d h:m:s', strtotime($end_date))." ";
+$endDate = $end_date;
+//$startDate = date('Y-m-d h:m:s', strtotime($start_data));
+$startDate = $start_data;
 
 ?>
     <div class="row row-sm">
@@ -25,7 +27,8 @@ $startDate = date('Y-m-d h:m:s', strtotime($start_data));
                             <div class="row align-items-center">
                                 <div class="offset-xl-3 offset-sm-6 col-xl-8 col-sm-6 col-12 img-bg ">
                                     <h4 class="d-flex  mb-3">
-                                        <span class="font-weight-bold text-white ">{{Auth::user()->name}}</span>
+{{--                                        <span class="font-weight-bold text-white ">{{Auth::user()->name}}{{$startDate}} OR {{$start_data}} END {{$endDate}} OR {{$end_date}}</span>--}}
+                                        <span class="font-weight-bold text-white ">{{Auth::user()->name}} </span>
                                     </h4>
                                     <p class="tx-white-7 mb-1">WELCOME ON ISHYIGA CALL CENTER SYSTEM  <b class="text-warning">&</b> <br> <strong>{{Auth::user()->email}}</strong></div>
                                 <img src="{{asset('/public/dashboard/assets/img/pngs/work3.png')}}" alt="user-img" class="wd-200">
@@ -171,7 +174,7 @@ $startDate = date('Y-m-d h:m:s', strtotime($start_data));
                         </div>
                         <div class="card-item-body">
                         <?php $missed=new \App\Responsiveness();
-                            $responsess=$missed->getMissedResponsiveness($startDate,$endDate);
+                            $responsess=$missed->getMissedResponsivenessFilter($startDate,$endDate);
 
                             ?>
                             <div class="card-item-stat">
