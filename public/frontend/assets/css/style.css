@@ -202,6 +202,8 @@ textarea {
 
 .cc_btn {
     /*float:right;*/
+    text-align: center;
+    line-height: 32px;
     width: 150px;
     height: 42px;
     background: transparent;

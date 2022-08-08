@@ -2,12 +2,12 @@
 <div class="main-header side-header sticky">
     <div class="container-fluid">
         <div class="main-header-left">
-            <a href="{{url('/')}}">    <img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
+            <a href="{{url('/')}}">    <img src="{{asset('frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
         </div>
         <div class="main-header-center">
             <div class="responsive-logo">
-                <a href="{{route('dashboard')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
-                <a href="{{route('dashboard')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo-dark" alt="logo"></a>
+                <a href="{{route('dashboard')}}"><img src="{{asset('frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
+                <a href="{{route('dashboard')}}"><img src="{{asset('frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo-dark" alt="logo"></a>
             </div>
         </div>
         <div class="main-header-right">
@@ -22,14 +22,13 @@
                     <i class="fe fe-minimize fullscreen-button exit-fullscreen header-icons"></i>
                 </a>
             </div>
-{{--            <div class="main-profile-menu">--}}
-{{--                <a class="d-flex btn btn-info" href="{{route('login')}}">LOGIN--}}
-{{--                </a>--}}
-{{--            </div>--}}
+           <div class="main-profile-menu">
+               <a class="d-flex btn btn-info" href="{{route('login')}}">LOGIN</a>
+           </div>
 
             <a href="{{route('login')}}" class="navresponsive-toggler btn btn-info" type="button">
                 LOGIN
-{{--                <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>--}}
+               <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
             </a>
             <!-- Navresponsive closed -->
         </div>

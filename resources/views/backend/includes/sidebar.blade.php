@@ -1,18 +1,18 @@
 <!-- Sidemenu -->
 <div class="main-sidebar main-sidebar-sticky side-menu">
     <div class="sidemenu-logo">
-        <a class="main-logo" href="{{route('dashboard')}}">
-            <img src="{{asset('public/frontend/img/call_centern.png')}}" class="header-brand-img desktop-logo" alt="logo">
-            <img src="{{asset('public/frontend/img/call_centern.png')}}" class="header-brand-img icon-logo" alt="logo">
-            <img src="{{asset('public/frontend/img/call_centern.png')}}" class="header-brand-img desktop-logo theme-logo" alt="logo">
-            <img src="{{asset('public/frontend/img/call_centern.png')}}" class="header-brand-img icon-logo theme-logo" alt="logo">
+        <a class="main-logo" href="{{route('home')}}">
+            <img src="{{asset('frontend/img/call_centern.png')}}" class="header-brand-img desktop-logo" alt="logo">
+            <img src="{{asset('frontend/img/call_centern.png')}}" class="header-brand-img icon-logo" alt="logo">
+            <img src="{{asset('frontend/img/call_centern.png')}}" class="header-brand-img desktop-logo theme-logo" alt="logo">
+            <img src="{{asset('frontend/img/call_centern.png')}}" class="header-brand-img icon-logo theme-logo" alt="logo">
         </a>
     </div>
     <div class="main-sidebar-body">
         <ul class="nav">
             <li class="nav-header"><span class="nav-label">Dashboard</span></li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('dashboard')}}"><span class="shape1"></span><span class="shape2"></span>
+                <a class="nav-link" href="{{route('home')}}"><span class="shape1"></span><span class="shape2"></span>
                     <i class="ti-home sidemenu-icon"></i><span class="sidemenu-label">Dashboard</span></a>
             </li>
 

@@ -6,8 +6,8 @@
         </div>
         <div class="main-header-center">
             <div class="responsive-logo">
-                <a href="{{route('dashboard')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
-                <a href="{{route('dashboard')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo-dark" alt="logo"></a>
+                <a href="{{route('home')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo" alt="logo"></a>
+                <a href="{{route('home')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" style="width: 50% !important;" class="mobile-logo-dark" alt="logo"></a>
             </div>
         </div>
         <div class="main-header-right">
@@ -24,7 +24,7 @@
             </div>
             <div class="dropdown main-profile-menu">
                 <a class="d-flex" href="#">
-                    <span class="main-img-user" ><img alt="avatar" src="{{asset('/public/dashboard/assets/img/users/1.jpg')}}"></span>
+                    <span class="main-img-user" ><img alt="avatar" src="{{asset('dashboard/assets/img/users/1.jpg')}}"></span>
                 </a>
                 <div class="dropdown-menu">
                     <div class="header-navheading">
@@ -79,7 +79,7 @@
                 </div>
                 <div class="dropdown main-profile-menu">
                     <a class="d-flex" href="#">
-                        <span class="main-img-user" ><img alt="avatar" src="{{asset('/public/dashboard/assets/img/users/1.jpg')}}"></span>
+                        <span class="main-img-user" ><img alt="avatar" src="{{asset('dashboard/assets/img/users/1.jpg')}}"></span>
                     </a>
                     <div class="dropdown-menu">
                         <div class="header-navheading">

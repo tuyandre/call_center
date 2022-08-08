@@ -17,25 +17,25 @@
     <meta name="author" content="ISHYIGA">
     <meta name="ISHYIGA" content="320">
     <!-- css links start -->
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/fonts.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/color-switcher.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/media.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/fonts.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/color-switcher.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/media.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-    <link rel="shortcut icon" type="img/png" href="{{asset('public/frontend/img/logo-company.png')}}">
+    <link rel="shortcut icon" type="img/png" href="{{asset('frontend/img/logo-company.png')}}">
     @yield('css')
 </head>
 
 <body>
 <!-- preloader start -->
 <div id="preloader">
-    <div id="status"><img src="{{asset('public/frontend/assets/images/pre1.gif')}}" alt=""></div>
+    <div id="status"><img src="{{asset('frontend/assets/images/pre1.gif')}}" alt=""></div>
 </div>
 
 @include('frontend.header')
@@ -46,14 +46,14 @@
 
 @include('frontend.footer')
 <!-- js start -->
-<script src="{{asset('public/frontend/assets/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/countTo.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/appear.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/color-switcher.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/typed.js')}}"></script>
-<script src="{{asset('public/frontend/assets/js/custom.js')}}"></script>
+<script src="{{asset('frontend/assets/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/countTo.js')}}"></script>
+<script src="{{asset('frontend/assets/js/appear.js')}}"></script>
+<script src="{{asset('frontend/assets/js/color-switcher.js')}}"></script>
+<script src="{{asset('frontend/assets/js/typed.js')}}"></script>
+<script src="{{asset('frontend/assets/js/custom.js')}}"></script>
 @yield('js')
 </body>
 

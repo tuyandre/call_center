@@ -16,6 +16,7 @@
             color: #fff;
             background: #63738a;
             font-family: 'Roboto', sans-serif;
+            padding-top: 150px;
         }
         .form-control {
             height: 40px;
@@ -106,6 +107,9 @@
         .signup-form form a:hover {
             text-decoration: underline;
         }
+        .logo-btn {
+            width: 50px;
+        }
     </style>
 </head>
 <body>
@@ -117,8 +121,8 @@
             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" required="required">
             @error('email')
             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
         <div class="form-group">
@@ -133,7 +137,7 @@
         <div class="form-group">
             <input type="submit" class="btn btn-success btn-lg btn-block" value="Sign In">
         </div>
-        <div class="text-center"> <a href="{{route('welcome')}}"><img src="{{asset('public/frontend/img/logo-company.png')}}"> <strong>BACK TO HOME</strong></a></div>
+        <div class="text-center"> <a href="{{route('welcome')}}"><img class="logo-btn" src="{{asset('frontend/img/logo-company.png')}}"> <strong>BACK TO HOME</strong></a></div>
     </form>
 
 </div>

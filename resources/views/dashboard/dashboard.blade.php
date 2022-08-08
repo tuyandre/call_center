@@ -29,7 +29,7 @@ $startDate = $endDate2->firstOfMonth();
                                         <span class="font-weight-bold text-white ">{{Auth::user()->name}}</span>
                                     </h4>
                                     <p class="tx-white-7 mb-1">WELCOME ON ISHYIGA CALL CENTER SYSTEM  <b class="text-warning">&</b> <br> <strong>{{Auth::user()->email}}</strong></div>
-                                <img src="{{asset('/public/dashboard/assets/img/pngs/work3.png')}}" alt="user-img" class="wd-200">
+                                <img src="{{asset('dashboard/assets/img/pngs/work3.png')}}" alt="user-img" class="wd-200">
 
                             </div>
 
@@ -77,7 +77,7 @@ $startDate = $endDate2->firstOfMonth();
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/accept.png')}}" alt="">
+                            <img src="{{asset('dashboard/assets/img/accept.png')}}" alt="">
                         </div>
                         <div class="card-item-title mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">Total Calls</label>
@@ -99,7 +99,7 @@ $startDate = $endDate2->firstOfMonth();
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/incoming.png')}}" alt="">
+                            <img src="{{asset('dashboard/assets/img/incoming.png')}}" alt="">
                         </div>
                         <div class="card-item-title mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">Incoming Calls</label>
@@ -121,7 +121,7 @@ $startDate = $endDate2->firstOfMonth();
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/outgoing.jpg')}}" alt="">
+                            <img src="{{asset('dashboard/assets/img/outgoing.jpg')}}" alt="">
                         </div>
                         <div class="card-item-title  mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">All Outgoing Calls</label>	<span class="d-block tx-12 mb-0 text-muted">All Outgoing Calls</span>
@@ -143,7 +143,7 @@ $startDate = $endDate2->firstOfMonth();
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
-                            <img src="{{asset('/public/dashboard/assets/img/missed.png')}}" alt="">
+                            <img src="{{asset('dashboard/assets/img/missed.png')}}" alt="">
                         </div>
                         <div class="card-item-title  mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">All Missed Calls</label>	<span class="d-block tx-12 mb-0 text-muted">All Missed Calls</span>
@@ -165,7 +165,7 @@ $startDate = $endDate2->firstOfMonth();
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
 
-                            <img src="{{asset('/public/dashboard/assets/img/end-call.jpg')}}" alt="">
+                            <img src="{{asset('dashboard/assets/img/end-call.jpg')}}" alt="">
                         </div>
                         <div class="card-item-title  mb-2">
                             <label class="main-content-label tx-13 font-weight-bold mb-1">RESPONSIVENESS RATE</label>

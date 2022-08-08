@@ -4,9 +4,11 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CallController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +29,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
-Route::group(['prefix' => '/home/'], function () {
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::prefix('home')->group(function () {
 
     Route::get('/All_callsPagination', [CallController::class, 'allCallsPagination'])->name('admin.calls.allCallsPagination');
     Route::get('/All_calls', [CallController::class, 'allCalls'])->name('admin.calls.allCalls');

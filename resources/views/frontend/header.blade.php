@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-3">
                     <div class="cc_logo">
-                        <a href="{{url('/')}}"><img src="{{asset('public/frontend/img/call_center2.png')}}" alt="call-center" style="height: 65px !important;"></a>
+                        <a href="{{url('/')}}"><img src="{{asset('frontend/img/call_center2.png')}}" alt="call-center" style="height: 65px !important;"></a>
                     </div>
                     <div class="toggle_right">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -31,7 +31,7 @@
                                 <nav class="navbar">
                                     <div class="collapse navbar-collapse" id="myNavbar">
 
-                                        <button type="button" class="cc_btn" data-toggle="modal" data-target="#myModal">login</button>
+                                        <a href="/login" class="cc_btn">login</a>
                                         <!-- Modal -->
                                         <div class="modal fade" id="myModal" role="dialog">
                                             <div class="modal-dialog">
@@ -76,13 +76,13 @@
                                         </div>
                                         <!--modal-->
 
-                                        <ul class="list-inline cc_mainMenu">
-                                            <li class="active"><a href="0">home</a></li>
-                                            <li><a href="1">about</a></li>
-{{--                                            <li><a href="2">services</a></li>--}}
-{{--                                            <li><a href="3">FAQ'S</a></li>--}}
-{{--                                            <li><a href="5">contact us</a></li>--}}
-                                        </ul>
+                                        {{-- <ul class="list-inline cc_mainMenu"> --}}
+                                            {{-- <li class="active"><a href="0">home</a></li> --}}
+                                            {{-- <li><a href="1">about</a></li> --}}
+                                           {{-- <li><a href="2">services</a></li> --}}
+                                           {{-- <li><a href="3">FAQ'S</a></li> --}}
+                                           {{-- <li><a href="5">contact us</a></li> --}}
+                                        {{-- </ul> --}}
                                     </div>
                                 </nav>
                             </div>
@@ -93,58 +93,58 @@
         </div>
     </div>
     <!-- banner start -->
-{{--    <div class="cc_banner">--}}
-{{--        <div class="owl-carousel owl-theme">--}}
-{{--            <div class="item owl-item1">--}}
-{{--                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">--}}
-{{--                    <div class="caption">--}}
-{{--                        <div class="container">--}}
+   <div class="cc_banner">
+       <div class="owl-carousel owl-theme">
+           <div class="item owl-item1">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">
+                   <div class="caption">
+                       <div class="container">
 
-{{--                            <div id="typed-strings">--}}
-{{--                                <h1>Welcome to <i>ISHYIGA CALL CENTER</i></h1>--}}
-{{--                            </div>--}}
-{{--                            <div class="typing_text">--}}
-{{--                                <span id="typed"></span>--}}
-{{--                            </div>--}}
+                           <div id="typed-strings">
+                               <h1>Welcome to <i>ISHYIGA CALL CENTER</i></h1>
+                           </div>
+                           <div class="typing_text">
+                               <span id="typed"></span>
+                           </div>
 
-{{--                            <h1>Thanks for Bringing this to Our Attention</h1>--}}
+                           <h1>Thanks for Bringing this to Our Attention</h1>
 
-{{--                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">--}}
-{{--                                <div class="row">--}}
-{{--                                    <form class="b">--}}
-{{--                                        <input type="search" name="search" value="" placeholder="KEYWORD" class="form-control">--}}
-{{--                                        <button type="button" class="search_btn">search</button>--}}
-{{--                                    </form>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                           {{-- <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
+                               <div class="row">
+                                   <form class="b">
+                                       <input type="search" name="search" value="" placeholder="KEYWORD" class="form-control">
+                                       <button type="button" class="search_btn">search</button>
+                                   </form>
+                               </div>
+                           </div> --}}
 
-{{--                        </div>--}}
+                       </div>
 
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="item owl-item2">--}}
-{{--                <div class="container">--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">--}}
-{{--                            <div class="caption">--}}
-{{--                                <h1 class="b">Find articles , help , and advice <br> for getting the most out of <span>ISHYIGA SOFTWARE</span></h1>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="item owl-item3">--}}
-{{--                <div class="container">--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">--}}
-{{--                            <div class="caption">--}}
-{{--                                <h1 class="a">always available<br> for our customers</h1>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+                   </div>
+               </div>
+           </div>
+           <div class="item owl-item2">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">
+                           <div class="caption">
+                               <h1 class="b">Find articles , help , and advice <br> for getting the most out of <span>ISHYIGA SOFTWARE</span></h1>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="item owl-item3">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 caption_position">
+                           <div class="caption">
+                               <h1 class="a">always available<br> for our customers</h1>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
 </div>
