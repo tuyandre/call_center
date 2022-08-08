@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\CallLogs;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 
@@ -15,5 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(10)->create();
+        // CallLogs::factory(100)->create();
     }
 }
