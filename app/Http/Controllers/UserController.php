@@ -34,10 +34,7 @@ class UserController extends Controller
         return redirect()->back()->with('message',"User Saved Successful");
     }
     public function allUsers(){
-        $users=User::all();
-        return view("backend.allUsers", [
-            'users' => $users
-        ]);
+        return view("backend.allUsers");
     }
     public function getAllUsers(){
         if (Auth::check()){

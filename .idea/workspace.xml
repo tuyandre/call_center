@@ -234,7 +234,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$frontend/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/public/frontend/assets/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/frontend/master.blade.php" />
         <option value="$PROJECT_DIR$/routes/auth.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
@@ -869,7 +869,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$dashboard/assets/css/style/style.css">
+    <entry file="file://$PROJECT_DIR$/public/dashboard/assets/css/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6222">
           <caret column="400" lean-forward="true" selection-start-column="400" selection-end-column="400" />
@@ -892,7 +892,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$dashboard/assets/css/skins.css">
+    <entry file="file://$PROJECT_DIR$/public/dashboard/assets/css/skins.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/includes/header.blade.php">
