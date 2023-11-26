@@ -32,28 +32,40 @@
                             <thead>
                             <tr>
                                 <th class="wd-20p">Staff Id</th>
-                                <th class="wd-20p">Name</th>
-                                <th class="wd-20p">Email</th>
-                                <th class="wd-20p">Phone</th>
+                                <th class="wd-20p">Staff Name</th>
+                                <th class="wd-20p">Phone Brand &Model</th>
+                                <th class="wd-20p">Phone Number</th>
+                                <th class="wd-20p">Assigned Date</th>
+                                <th class="wd-20p">Replaced Date</th>
+                                <th class="wd-20p">Assigned By</th>
                                 <th class="wd-20p">Status</th>
+                                <th class="wd-20p">Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($staffs as $staff)
+                            @foreach($staff_phones as $staff_phone)
                                 <tr>
-                                    <td>{{$staff->staff_external}}</td>
-                                    <td>{{$staff->name}}</td>
-                                    <td>{{$staff->email}}</td>
-                                    <td>{{$staff->phone}}</td>
+                                    <td>{{$staff_phone->callCenterStaff->staff_external}}</td>
+                                    <td>{{$staff_phone->callCenterStaff->name}}</td>
+                                    <td>{{$staff_phone->callCenterPhone->brand}} & {{$staff_phone->callCenterPhone->model}}</td>
+                                    <td>{{$staff_phone->callCenterPhone->phone_number}}</td>
+                                    <td>{{$staff_phone->assigned_at}}</td>
+                                    <td>{{$staff_phone->returned_at}}</td>
+                                    <td>{{$staff_phone->assignedBy->name}}</td>
                                     <td>
-                                        @if($staff->status == 1)
+                                        @if($staff_phone->status == 1)
                                             <span class="badge badge-success">Active</span>
                                         @else
                                             <span class="badge badge-danger">Inactive</span>
                                         @endif
                                     </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>
+                                            <button type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                        </div>
+                                    </td>
                                 </tr>
-
                             @endforeach
 
                             </tbody>
@@ -79,22 +91,20 @@
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Staff:</label>
                             <select class="form-control select2" aria-hidden="true" id="recipient-name" name="call_center_staff_id" required>
-                                <option value="1">Staff 1</option>
-                                <option>Staff 2</option>
-                                <option>Staff 3</option>
-                                <option>Staff 4</option>
-                                <option>Staff 5</option>
+                                <option value="">Select Staff</option>
+                                @foreach($staffs as $staff)
+                                    <option value="{{$staff->id}}">{{$staff->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Phone:</label>
 
                             <select class="form-control select2" id="message-text" name="call_center_phone_id" required>
-                                <option value="1">Phone 1</option>
-                                <option>Phone 2</option>
-                                <option>Phone 3</option>
-                                <option>Phone 4</option>
-                                <option>Phone 5</option>
+                                <option value="">Select Phone</option>
+                                @foreach($phones as $phone)
+                                    <option value="{{$phone->id}}">{{$phone->brand}} & {{$phone->model}}</option>
+                                @endforeach
                             </select>
                         </div>
 

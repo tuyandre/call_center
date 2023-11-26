@@ -130,7 +130,7 @@ $startDate = $endDate2->firstOfMonth();
                             <span class="d-block tx-12 mb-0 text-muted">Total All Calls</span>
                         </div>
                         <div class="card-item-body">
-                            <?php $calls=\App\Models\CallLogs::all()->whereBetween('date', [$startDate, $endDate]); ?>
+                            <?php $calls=\App\Models\CallRecord::all()->whereBetween('date', [$startDate, $endDate]); ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold">{{$calls->count()}}</h4>
                                 <small><b class="text-success"></b> all calls</small>
@@ -153,7 +153,7 @@ $startDate = $endDate2->firstOfMonth();
                             <span class="d-block tx-12 mb-0 text-muted">Total Incoming Calls</span>
                         </div>
                         <div class="card-item-body">
-                            <?php $incomes=\App\Models\CallLogs::where('type','=','INCOMING')->whereBetween('date', [$startDate, $endDate])->get(); ?>
+                            <?php $incomes=\App\Models\CallRecord::where('type','=','INCOMING')->whereBetween('date', [$startDate, $endDate])->get(); ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold">{{$incomes->count()}}</h4>
                                 <small><b class="text-success"></b> Calls</small>
@@ -174,7 +174,7 @@ $startDate = $endDate2->firstOfMonth();
                             <label class="main-content-label tx-13 font-weight-bold mb-1">All Outgoing Calls</label>	<span class="d-block tx-12 mb-0 text-muted">All Outgoing Calls</span>
                         </div>
                         <div class="card-item-body">
-                            <?php $outs=\App\Models\CallLogs::where('type','=','OUTGOING')->whereBetween('date', [$startDate, $endDate])->get(); ?>
+                            <?php $outs=\App\Models\CallRecord::where('type','=','OUTGOING')->whereBetween('date', [$startDate, $endDate])->get(); ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold">{{$outs->count()}}</h4>
                                 <small><b class="text-danger"></b> Calls</small>
@@ -196,7 +196,7 @@ $startDate = $endDate2->firstOfMonth();
                             <label class="main-content-label tx-13 font-weight-bold mb-1">All Missed Calls</label>	<span class="d-block tx-12 mb-0 text-muted">All Missed Calls</span>
                         </div>
                         <div class="card-item-body">
-                            <?php $mis=\App\Models\CallLogs::where('type','=','MISSED')->whereBetween('date', [$startDate, $endDate])->get(); ?>
+                            <?php $mis=\App\Models\CallRecord::where('type','=','MISSED')->whereBetween('date', [$startDate, $endDate])->get(); ?>
                             <div class="card-item-stat">
                                 <h4 class="font-weight-bold">{{$mis->count()}}</h4>
                                 <small><b class="text-danger"></b> Calls</small>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CallCenterPhoneController;
 use App\Http\Controllers\CallCenterStaffController;
 use App\Http\Controllers\CallController;
+use App\Http\Controllers\CallRecordController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReportController;
@@ -93,4 +94,8 @@ Route::prefix('dashboard')->group(function () {
     //staff phones
     Route::get('/staff/phone_list', [StaffPhoneController::class, 'index'])->name('admin.staff.phones');
     Route::post('/staff/phone_list/store', [StaffPhoneController::class, 'store'])->name('admin.staff.phones.store');
+
+
+    //call records
+    Route::get('/records/index', [CallRecordController::class, 'index'])->name('admin.call_records.index');
 });

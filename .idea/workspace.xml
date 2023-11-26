@@ -5,33 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ebec19b-c483-4e05-8ae4-fe766110f97a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_11_24_23__9_10_PM.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dashboard/assets/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/add_devices.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/add_staff.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/callCenterPhone.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/callCenterStaff.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/staffPhoneList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/call_center.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/call_center.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/call_records/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9b2201b8-56f1-477c-8484-1e3f079cccbe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9b2201b8-56f1-477c-8484-1e3f079cccbe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9b2201b8-56f1-477c-8484-1e3f079cccbe/storage_v2/_src_/schema/call_trackings.-0-img.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9b2201b8-56f1-477c-8484-1e3f079cccbe/storage_v2/_src_/schema/call_trackings.-0-img.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/addUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/addUser.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/allCalls.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/allCalls.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/allUsers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/allUsers.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StaffPhoneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaffPhoneController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CallCenterPhone.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CallCenterPhone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CallCenterStaff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CallCenterStaff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/StaffPhone.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/StaffPhone.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/staffPhoneList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/staffPhoneList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +145,37 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Tuyandre" />
+                    <option name="lastUsedInstant" value="1700967434" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1700967433" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -343,9 +360,9 @@
       <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="170" />
     <option name="y" value="91" />
@@ -518,8 +535,8 @@
     "RunOnceActivity.laravel-idea.update-module-directories": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/SOFTCODE/ISHYIGA/WEB APPLICATION/LARAVEL/call_center/resources/views/backend",
+    "git-widget-placeholder": "Tuyandre",
+    "last_opened_file_path": "D:/SOFTCODE/ISHYIGA/WEB APPLICATION/LARAVEL/call_center/resources/views/backend/call_records",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -537,11 +554,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SOFTCODE\ISHYIGA\WEB APPLICATION\LARAVEL\call_center\resources\views\backend\call_records" />
       <recent name="D:\SOFTCODE\ISHYIGA\WEB APPLICATION\LARAVEL\call_center\resources\views\backend" />
       <recent name="D:\SOFTCODE\ISHYIGA\WEB APPLICATION\LARAVEL\call_center" />
       <recent name="C:\xampp\htdocs\call_center\resources\views\backend" />
       <recent name="C:\xampp\htdocs\call_center\resources\views" />
-      <recent name="C:\xampp\htdocs\ISHYIGA\call_center" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SOFTCODE\ISHYIGA\WEB APPLICATION\LARAVEL\call_center\resources\views\backend" />
@@ -593,7 +610,10 @@
       <workItem from="1655781246527" duration="5870000" />
       <workItem from="1655787643559" duration="5590000" />
       <workItem from="1655836826319" duration="2731000" />
-      <workItem from="1700852966205" duration="19046000" />
+      <workItem from="1700852966205" duration="19451000" />
+      <workItem from="1700983683864" duration="35000" />
+      <workItem from="1700983735842" duration="555000" />
+      <workItem from="1700984359680" duration="10848000" />
     </task>
     <servers />
   </component>

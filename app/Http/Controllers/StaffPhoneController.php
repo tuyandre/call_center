@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CallCenterPhone;
+use App\Models\CallCenterStaff;
 use App\Models\StaffPhone;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,22 +14,30 @@ class StaffPhoneController extends Controller
     //index
     public function index()
     {
-        $data= StaffPhone::all();
+        $phones = CallCenterPhone::whereDoesntHave('staffPhones', function ($query) {
+            $query->where('phone_status', 'Active');
+        })->where('phone_status', 'Working')->get();
+
+        $staffs = CallCenterStaff::where('status', 'Active')->get();
+
+        $data= StaffPhone::with('callCenterStaff','callCenterPhone','assignedBy')->get();
         return view('backend.staffPhoneList', [
-            'staffs' => $data
+            'staff_phones' => $data,
+            'phones' => $phones,
+            'staffs' => $staffs
         ]);
     }
 
     //store
     public function store(Request $request)
     {
-        $request = Validator::make($request->all(),[
+        $validation = Validator::make($request->all(),[
             'call_center_staff_id' => 'required|exists:call_center_staff,id',
             'call_center_phone_id' => 'required|exists:call_center_phones,id',
         ]);
 
-        if ($request->fails()) {
-            return redirect()->back()->withErrors($request->errors())->withInput();
+        if ($validation->fails()) {
+            return redirect()->back()->withErrors($validation->errors())->withInput();
         }
 
         $staffPhone = new StaffPhone();
