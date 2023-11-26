@@ -2,13 +2,19 @@
 
 @section('title','Home')
 @section('css')
-
     <link href="{{asset('/dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet" />
     <link href="{{asset('/dashboard/assets/plugins/datatable/responsivebootstrap4.min.css')}}" rel="stylesheet" />
     <link href="{{asset('/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css')}}" rel="stylesheet" />
 @endsection
-@section('content_title','SYSTEM CALLS')
-@section('content_target','All CALLS')
+@section('content_title','SYSTEM PHONES')
+@section('content_target','All PHONES')
+@section('action_buttons')
+
+    <a type="button" href="{{route('admin.phones.create')}}"  class="btn btn-info my-2 btn-icon-text" id="report_exportqwe">
+        <i class="fe fe-user-plus mr-2"></i> Add Device
+    </a>
+
+@endsection
 @section('contents')
 
 
@@ -18,23 +24,36 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
-                        <h6 class="main-content-label mb-1">All Calls List</h6>
+                        <h6 class="main-content-label mb-1">All Staff List</h6>
 
                     </div>
-                    <div class="table-responsive table-hover">
+                    <div class="table-responsive table-hover table-condensed table  ">
                         <table class="table" id="CallTable">
                             <thead>
                             <tr>
-{{--                                <th class="wd-20p">Caller Id</th>--}}
-                                <th class="wd-20p">Client Phone</th>
-                                <th class="wd-20p">Client Name</th>
-                                <th class="wd-25p">Type</th>
-                                <th class="wd-20p">Date</th>
-                                <th class="wd-20p">Duration</th>
-                                <th class="wd-20p">Action</th>
+                                <th class="wd-20p">Serial Number</th>
+                                <th class="wd-20p">Phone Number</th>
+                                <th class="wd-20p">Brand</th>
+                                <th class="wd-20p">Model</th>
+                                <th class="wd-20p">Status</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($phones as $phone)
+                                <tr>
+                                    <td>{{$phone->serial_number}}</td>
+                                    <td>{{$phone->phone_number}}</td>
+                                    <td>{{$phone->brand}}</td>
+                                    <td>{{$phone->model}}</td>
+                                    <td>
+                                        @if($phone->phone_status == 1)
+                                            <span class="badge badge-success">Active</span>
+                                        @else
+                                            <span class="badge badge-danger">Inactive</span>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
 
                             </tbody>
                         </table>
@@ -51,42 +70,14 @@
 @section('js')
 
     <script>
-        var defaultUrl = "{{ route('admin.calls.getAllCalls') }}";
+        var defaultUrl = "{{ route('admin.users.getAllUsers') }}";
         var table;
-        var manageTable = $("#CallTable");
-        function myFunc() {
-            table = manageTable.DataTable({
-                ajax: {
-                    url: defaultUrl,
-                    dataSrc: 'calls'
-                },
-                columns: [
-                    {data: 'client_phone'},
-                    {data: 'client_name'},
-                    {data: 'type'},
-                    {data: 'date'},
-                    {data: 'duration'},
-                    {
-                        data: 'client_phone',
-                        render: function (data, type, row) {
-                            var url_more = '{{ route("admin.calls.callDetail", ":id") }}';
-                            url_more = url_more.replace(':id', row.client_phone);
-
-                                return"<a  href='"+url_more+"' class='btn btn-info btn-sm btn-flat js-detail' data-id='" + data +
-                                    "' > <i class='fa fa-eye'></i>View</a>";
-
-
-                        }
-                    }
-                ]
-            });
-        }
-
 
         $(document).ready(function () {
+            var manageTable = $("#CallTable");
+            manageTable.DataTable();
 
-            //initialize data table
-            myFunc();
+
 
 
         });

@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\CallCenterPhoneController;
+use App\Http\Controllers\CallCenterStaffController;
 use App\Http\Controllers\CallController;
+use App\Http\Controllers\CallRecordController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\StaffPhoneController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -34,7 +38,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::prefix('home')->group(function () {
+
+Route::prefix('dashboard')->group(function () {
 
     Route::get('/All_callsPagination', [CallController::class, 'allCallsPagination'])->name('admin.calls.allCallsPagination');
     Route::get('/All_calls', [CallController::class, 'allCalls'])->name('admin.calls.allCalls');
@@ -69,4 +74,28 @@ Route::prefix('home')->group(function () {
     Route::post('/reports/export_customized', [ExportController::class, 'exportCustomized'])->name('admin.reports.exportCustomized');
 
     Route::post('/filter/ranger_filter', [CallController::class, 'FilterDate'])->name('admin.filter.date');
+
+    //staff
+    Route::get('/staffs', [CallCenterStaffController::class, 'index'])->name('admin.staff.index');
+    Route::get('/staffs/create', [CallCenterStaffController::class, 'create'])->name('admin.staff.create');
+    Route::post('/staffs/store', [CallCenterStaffController::class, 'store'])->name('admin.staff.store');
+
+
+
+    //phones
+    Route::get('/phones', [CallCenterPhoneController::class, 'index'])->name('admin.phones.index');
+    Route::get('/phones/create', [CallCenterPhoneController::class, 'create'])->name('admin.phones.create');
+    Route::post('/phones/store', [CallCenterPhoneController::class, 'store'])->name('admin.phones.store');
+
+
+
+
+
+    //staff phones
+    Route::get('/staff/phone_list', [StaffPhoneController::class, 'index'])->name('admin.staff.phones');
+    Route::post('/staff/phone_list/store', [StaffPhoneController::class, 'store'])->name('admin.staff.phones.store');
+
+
+    //call records
+    Route::get('/records/index', [CallRecordController::class, 'index'])->name('admin.call_records.index');
 });

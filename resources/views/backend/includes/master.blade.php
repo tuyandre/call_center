@@ -10,10 +10,11 @@
     <meta name="keywords" content="Ethical Research Solution">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="img/png" href="{{asset('public/frontend/img/logo-company.png')}}">
+    <link rel="shortcut icon" type="img/png" href="{{asset('/frontend/img/logo-company.png')}}">
 
     <!-- Title -->
     <title>@yield('title') | ISHYIGA|CALLCENTER</title>
+    <script src="{{asset('dashboard/assets/plugins/jquery/jquery.min.js')}}"></script>
 
     <!-- Bootstrap css-->
     <link href="{{asset('dashboard/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"/>
@@ -22,10 +23,11 @@
     <link href="{{asset('dashboard/assets/plugins/web-fonts/icons.css')}}" rel="stylesheet"/>
     <link href="{{asset('dashboard/assets/plugins/web-fonts/font-awesome/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/assets/plugins/web-fonts/plugin.css')}}" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{asset('public/frontend/assets/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('/frontend/assets/css/flaticon.css')}}">
     <!-- Style css-->
     <link href="{{asset('dashboard/assets/css/style/style.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/assets/css/skins.css')}}" rel="stylesheet">
+    <link href="{{asset('dashboard/assets/css/custom.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/assets/css/dark-style.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard/assets/css/colors/default.css')}}" rel="stylesheet">
 
@@ -100,7 +102,6 @@
 <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
 
 <!-- Jquery js-->
-<script src="{{asset('dashboard/assets/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap js-->
 <script src="{{asset('dashboard/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
 <script src="{{asset('dashboard/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -129,10 +130,10 @@
 
 <!-- Circle Progress js-->
 <script src="{{asset('dashboard/assets/js/circle-progress.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/js/chart-circle.js')}}"></script>
+{{--<script src="{{asset('dashboard/assets/js/chart-circle.js')}}"></script>--}}
 
 <!-- Internal Dashboard js-->
-<script src="{{asset('dashboard/assets/js/index.js')}}"></script>
+{{--<script src="{{asset('dashboard/assets/js/index.js')}}"></script>--}}
 
 <!-- Sticky js -->
 <script src="{{asset('dashboard/assets/js/sticky.js')}}"></script>
@@ -142,10 +143,10 @@
 
 <!-- Switcher js -->
 <script src="{{asset('dashboard/assets/switcher/js/switcher.js')}}"></script>
-<script src="{{ asset('parsleyjs/js/parsley.min.js') }}" ></script>
-<script src="{{ asset('js/bootbox.min.js') }}" ></script>
+{{--<script src="{{ asset('parsleyjs/js/parsley.min.js') }}" ></script>--}}
+{{--<script src="{{ asset('js/bootbox.min.js') }}" ></script>--}}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>--}}
 @yield('js')
 </body>
 </html>

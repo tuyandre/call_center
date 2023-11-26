@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CallRecordController;
 use App\Http\Controllers\ApiCallController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/calls/push', [ApiCallController::class, 'store'])->name('api.store');
+Route::post('/calls/record/push', [CallRecordController::class, 'postCallRecord'])->name('api.calls.store');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

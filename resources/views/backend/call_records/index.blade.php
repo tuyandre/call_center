@@ -26,6 +26,8 @@
                             <thead>
                             <tr>
 {{--                                <th class="wd-20p">Caller Id</th>--}}
+                                <th class="wd-20p">Staff Name</th>
+                                <th class="wd-20p">Call Center Phone</th>
                                 <th class="wd-20p">Client Phone</th>
                                 <th class="wd-20p">Client Name</th>
                                 <th class="wd-25p">Type</th>
@@ -35,6 +37,33 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($callRecords as $callRecord)
+                            <tr>
+                                <td>{{$callRecord->StaffPhone->callCenterStaff?->name}}</td>
+                                <td>{{$callRecord->callCenterPhone->phone_number}}</td>
+                                <td>{{$callRecord->client_phone}}</td>
+                                <td>{{$callRecord->client_name}}</td>
+                                <td>
+
+                                    @if($callRecord->type == 'INCOMING')
+                                        @php($color = 'success')
+                                    @elseif($callRecord->type == 'OUTGOING')
+
+                                        @php($color = 'info')
+
+                                    @elseif($callRecord->type == 'MISSED')
+
+                                            @php($color = 'warning')
+
+                                    @endif
+                                    <span class="badge badge-{{$color}} rounded-10 ">{{$callRecord->type}}</span>
+                                </td>
+                                <td>{{$callRecord->date}}</td>
+                                <td>{{$callRecord->duration}}</td>
+                                <td>
+                                    <a href="{{route('admin.calls.callDetail',$callRecord->type)}}" class="btn btn-info btn-sm btn-flat js-detail" data-id="{{$callRecord->type}}" > <i class="fa fa-eye"></i>View</a>
+                                </td>
+                            @endforeach
 
                             </tbody>
                         </table>
@@ -53,40 +82,44 @@
     <script>
         var defaultUrl = "{{ route('admin.calls.getAllCalls') }}";
         var table;
-        var manageTable = $("#CallTable");
-        function myFunc() {
-            table = manageTable.DataTable({
-                ajax: {
-                    url: defaultUrl,
-                    dataSrc: 'calls'
-                },
-                columns: [
-                    {data: 'client_phone'},
-                    {data: 'client_name'},
-                    {data: 'type'},
-                    {data: 'date'},
-                    {data: 'duration'},
-                    {
-                        data: 'client_phone',
-                        render: function (data, type, row) {
-                            var url_more = '{{ route("admin.calls.callDetail", ":id") }}';
-                            url_more = url_more.replace(':id', row.client_phone);
+        {{--var manageTable = $("#CallTable");--}}
+        {{--function myFunc() {--}}
+        {{--    table = manageTable.DataTable({--}}
+        {{--        ajax: {--}}
+        {{--            url: defaultUrl,--}}
+        {{--            dataSrc: 'calls'--}}
+        {{--        },--}}
+        {{--        columns: [--}}
+        {{--            {data: 'client_phone'},--}}
+        {{--            {data: 'client_phone'},--}}
+        {{--            {data: 'client_phone'},--}}
+        {{--            {data: 'client_name'},--}}
+        {{--            {data: 'type'},--}}
+        {{--            {data: 'date'},--}}
+        {{--            {data: 'duration'},--}}
+        {{--            {--}}
+        {{--                data: 'client_phone',--}}
+        {{--                render: function (data, type, row) {--}}
+        {{--                    var url_more = '{{ route("admin.calls.callDetail", ":id") }}';--}}
+        {{--                    url_more = url_more.replace(':id', row.client_phone);--}}
 
-                                return"<a  href='"+url_more+"' class='btn btn-info btn-sm btn-flat js-detail' data-id='" + data +
-                                    "' > <i class='fa fa-eye'></i>View</a>";
+        {{--                        return"<a  href='"+url_more+"' class='btn btn-info btn-sm btn-flat js-detail' data-id='" + data +--}}
+        {{--                            "' > <i class='fa fa-eye'></i>View</a>";--}}
 
 
-                        }
-                    }
-                ]
-            });
-        }
+        {{--                }--}}
+        {{--            }--}}
+        {{--        ]--}}
+        {{--    });--}}
+        {{--}--}}
 
 
         $(document).ready(function () {
 
             //initialize data table
-            myFunc();
+            // myFunc();
+            var manageTable = $("#CallTable");
+            manageTable.DataTable();
 
 
         });
