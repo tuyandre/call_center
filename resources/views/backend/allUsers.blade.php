@@ -2,10 +2,9 @@
 
 @section('title','Home')
 @section('css')
-    <!-- Internal DataTables css-->
-    <link href="{{asset('/public/dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('/public/dashboard/assets/plugins/datatable/responsivebootstrap4.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('/dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('/dashboard/assets/plugins/datatable/responsivebootstrap4.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css')}}" rel="stylesheet" />
 @endsection
 @section('content_title','SYSTEM USERS')
 @section('content_target','All USERS')
@@ -28,13 +27,15 @@
                         <h6 class="main-content-label mb-1">All Users List</h6>
 
                     </div>
-                    <div class="table-responsive table-hover">
+                    <div class="table-responsive table-hover table-condensed table  ">
                         <table class="table" id="CallTable">
                             <thead>
                             <tr>
                                 <th class="wd-20p">User Name</th>
                                 <th class="wd-20p">User Email</th>
                                 <th class="wd-20p">User Username</th>
+                                <th class="wd-20p">User Phone</th>
+                                <th class="wd-20p">User Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -66,7 +67,15 @@
                 columns: [
                     {data: 'name'},
                     {data: 'email'},
-                    {data: 'username'}
+                    {data: 'username'},
+                    {data: 'phone'},
+                    {data: 'is_active', render: function (data, type, row) {
+                            if (row.is_active === 1) {
+                                return "<span class='badge badge-success'>Active</span>";
+                            } else {
+                                return "<span class='badge badge-danger'>Inactive</span>";
+                            }
+                        }},
                 ]
             });
         }
@@ -83,18 +92,18 @@
     </script>
 
     <!-- Internal Data Table js -->
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/jszip.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/pdfmake.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/vfs_fonts.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.print.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/plugins/datatable/fileexport/buttons.colVis.min.js')}}"></script>
-    <script src="{{asset('/public/dashboard/assets/js/table-data.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/jszip.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/pdfmake.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/vfs_fonts.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/buttons.print.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/plugins/datatable/fileexport/buttons.colVis.min.js')}}"></script>
+    <script src="{{asset('/dashboard/assets/js/table-data.js')}}"></script>
 
 @endsection
 

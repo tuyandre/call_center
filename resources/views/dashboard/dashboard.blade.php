@@ -77,6 +77,52 @@ $startDate = $endDate2->firstOfMonth();
                 <div class="card-body">
                     <div class="card-item">
                         <div class="card-item-icon card-icon">
+                            <i class="ti-user sidemenu-icon ti-3x"></i>
+
+                        </div>
+                        <div class="card-item-title mb-2">
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">Call Center Staff</label>
+                            <span class="d-block tx-12 mb-0 text-muted">Call Center Staff</span>
+                        </div>
+                        <div class="card-item-body">
+                            <?php $calls=\App\Models\CallCenterStaff::all() ?>
+                            <div class="card-item-stat">
+                                <h4 class="font-weight-bold">{{$calls->count()}}</h4>
+                                <small><b class="text-success"></b> all call center Staff</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <div class="card-item-icon card-icon">
+                            <i class="ti-mobile sidemenu-icon"></i>
+                        </div>
+                        <div class="card-item-title mb-2">
+                            <label class="main-content-label tx-13 font-weight-bold mb-1">Total Devices</label>
+                            <span class="d-block tx-12 mb-0 text-muted">Call Center Phones</span>
+                        </div>
+                        <div class="card-item-body">
+                            <?php $calls=\App\Models\CallCenterPhone::all() ?>
+                            <div class="card-item-stat">
+                                <h4 class="font-weight-bold">{{$calls->count()}}</h4>
+                                <small><b class="text-success"></b> all call center Phones</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <div class="card-item-icon card-icon">
                             <img src="{{asset('dashboard/assets/img/accept.png')}}" alt="">
                         </div>
                         <div class="card-item-title mb-2">
@@ -94,6 +140,7 @@ $startDate = $endDate2->firstOfMonth();
                 </div>
             </div>
         </div>
+
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
             <div class="card custom-card">
                 <div class="card-body">

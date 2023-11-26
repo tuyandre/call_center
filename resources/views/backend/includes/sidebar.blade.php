@@ -20,14 +20,31 @@
                 <a class="nav-link" href="{{route('admin.users.allUsers')}}"><span class="shape1"></span>
                     <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">ALL USERS</span></a>
             </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.staff.index')}}"><span class="shape1"></span>
+                    <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">STAFFS</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.phones.index')}}"><span class="shape1"></span>
+                    <span class="shape2"></span><i class="ti-mobile sidemenu-icon"></i><span class="sidemenu-label">DEVICES</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.staff.phones')}}"><span class="shape1"></span>
+                    <span class="shape2"></span><i class="ti-mobile sidemenu-icon"></i><span class="sidemenu-label">STAFF-PHONE</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.calls.allCalls')}}"><span class="shape1"></span>
                     <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">ALL CALLS</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.calls.allCallsPagination')}}"><span class="shape1"></span>
-                    <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">ALL CALLS Custom</span></a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a class="nav-link" href="{{route('admin.calls.allCallsPagination')}}"><span class="shape1"></span>--}}
+{{--                    <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">ALL CALLS Custom</span></a>--}}
+{{--            </li>--}}
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.calls.incomingCalls')}}"><span class="shape1"></span>
                     <span class="shape2"></span><i class="ti-mobile sidemenu-icon"></i><span class="sidemenu-label">INCOMING CALLS</span></a>

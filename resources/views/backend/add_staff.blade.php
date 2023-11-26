@@ -17,6 +17,19 @@
             {{ session()->get('message') }}
         </div>
     @endif
+    @if(session()->has('error'))
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+{{--            //check if is array--}}
+            @if(is_array(session()->get('error'))||is_object(session()->get('error')))
+                @foreach(session()->get('error') as $error)
+                    {{ $error }}<br/>
+                @endforeach
+            @else
+                {{ session()->get('error') }}
+            @endif
+        </div>
+    @endif
 
     <div class="row row-sm">
 
@@ -24,11 +37,11 @@
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
-                        <h6 class="main-content-label mb-1">Add User</h6>
-                        <p class="text-muted card-sub-title">Fill All Information for this User.</p>
+                        <h6 class="main-content-label mb-1">Add Staff</h6>
+                        <p class="text-muted card-sub-title">Fill All Information for this Staff.</p>
                     </div>
                     <div class="">
-                        <form   action="{{route('admin.users.save_user')}}" method="post">
+                        <form   action="{{route('admin.staff.store')}}" method="post">
                             @csrf
                             <div class="row row-xs align-items-center mg-b-20">
                                 <div class="col-md-4">
@@ -43,7 +56,8 @@
                                     <label class="mg-b-0">Email</label>
                                 </div>
                                 <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                    <input class="form-control" required name="email" placeholder="Email" type="email">
+                                        <input class="form-control" required name="email" placeholder="Email" type="email" >
+
                                 </div>
                             </div>
                             <div class="row row-xs align-items-center mg-b-20">
@@ -51,20 +65,20 @@
                                     <label class="mg-b-0">Phone</label>
                                 </div>
                                 <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                    <input class="form-control" required name="phone" placeholder="Phone" type="text">
+                                    <input class="form-control" required name="phone" placeholder="Phone" type="text"  >
                                 </div>
                             </div>
                             <div class="row row-xs align-items-center mg-b-20">
                                 <div class="col-md-4">
-                                    <label class="mg-b-0">Password</label>
+                                    <label class="mg-b-0">Algo Id</label>
                                 </div>
                                 <div class="col-md-8 mg-t-5 mg-md-t-0">
-                                    <input class="form-control" required name="password" placeholder="Password" type="password">
+                                    <input class="form-control" required name="staff_external" placeholder="Algo id (ALG00000001)" type="text">
                                 </div>
                             </div>
                             <div class="form-group row justify-content-end mb-0">
                                 <div class="col-md-8 pl-md-2">
-                                    <input type="submit" class="btn ripple btn-primary pd-x-30 mg-r-5" value="Save User">
+                                    <input type="submit" class="btn ripple btn-primary pd-x-30 mg-r-5" value="Save Staff">
                                 </div>
                             </div>
                         </form>
