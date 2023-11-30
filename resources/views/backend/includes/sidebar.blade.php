@@ -15,11 +15,13 @@
                 <a class="nav-link" href="{{route('home')}}"><span class="shape1"></span><span class="shape2"></span>
                     <i class="ti-home sidemenu-icon"></i><span class="sidemenu-label">Dashboard</span></a>
             </li>
-
+{{--            //check if the user is admin--}}
+            @if(auth()->user()->is_admin)
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.users.allUsers')}}"><span class="shape1"></span>
                     <span class="shape2"></span><i class="ti-user sidemenu-icon"></i><span class="sidemenu-label">ALL USERS</span></a>
             </li>
+            @endif
 
 
             <li class="nav-item">
