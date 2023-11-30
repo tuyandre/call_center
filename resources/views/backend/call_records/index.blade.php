@@ -39,7 +39,7 @@
                     <div class="form-group col-md-3">
                         <label for="inputState">Call Type</label>
                         <select id="inputState" class="form-control" name="type">
-                            <option selected>--Choose Type--</option>
+                            <option >--Choose Type--</option>
                             <option value="INCOMING" {{request()->input('type') == 'INCOMING' ? 'selected':''}}>INCOMING CALL</option>
                             <option value="OUTGOING" {{request()->input('type') == 'OUTGOING' ? 'selected':''}}>OUTGOING CALL</option>
                             <option value="MISSED" {{request()->input('type') == 'MISSED' ? 'selected':''}}>MISSED CALL</option>
