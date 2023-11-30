@@ -11,9 +11,17 @@
 
 //use Carbon\Carbon;
 
-$endDate = Carbon\Carbon::now();
+    //get request
+    $start_date = request()->input('start_date');
+
+$max_date = Carbon\Carbon::now()->addDays(1);
 $endDate2 = Carbon\Carbon::now();
-$startDate = $endDate2->firstOfMonth();
+
+
+//    $endDate2->firstOfMonth();
+
+$endDate = request()->input('end_date')? request()->input('end_date'):Carbon\Carbon::now();
+$startDate = request()->input('start_date')? request()->input('start_date'):Carbon\Carbon::now()->firstOfMonth();
 
 ?>
     <div class="row row-sm">
@@ -46,13 +54,13 @@ $startDate = $endDate2->firstOfMonth();
                 <div class="col-sm-12 col-lg-12 col-xl-12">
                     <div class="card bg-primary custom-card card-box">
                         <div class="card-body p-4">
-                            <form action="{{route('admin.filter.date')}}" method="post">
+                            <form action="{{route('home')}}" method="get">
                                 @csrf
                             <div class="row align-items-center">
                                 <div class="input-group input-daterange">
-                                    <input type="datetime-local" class="form-control" name="start_date" value="2012-04-05">
+                                    <input type="datetime-local" class="form-control" name="start_date" min="2022-01-01T00:00" value="{{$startDate}}">
                                     <div class="input-group-addon">to</div>
-                                    <input type="datetime-local" class="form-control" name="end_date" value="2012-04-19">
+                                    <input type="datetime-local" class="form-control" name="end_date" max="{{$max_date}}"  value="{{$endDate}}">
                                     <input type="submit" class="btn btn-info" value="Filter">
                                 </div>
 

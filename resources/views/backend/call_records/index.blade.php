@@ -10,6 +10,61 @@
 @section('content_title','SYSTEM CALLS')
 @section('content_target','All CALLS')
 @section('contents')
+    <?php
+
+//use Carbon\Carbon;
+
+    //get request
+    $start_date = request()->input('start_date');
+
+    $max_date = Carbon\Carbon::now()->addDays(1);
+    $endDate2 = Carbon\Carbon::now();
+
+
+//    $endDate2->firstOfMonth();
+
+    $endDate = request()->input('end_date')? request()->input('end_date'):Carbon\Carbon::now();
+    $startDate = request()->input('start_date')? request()->input('start_date'):Carbon\Carbon::now()->firstOfMonth();
+
+    ?>
+    <div class="row row-sm">
+        <div class="col-sm-12 col-lg-10 col-xl-10">
+            <!--Row-->
+            <div class="row row-sm  mt-lg-4">
+                <div class="col-sm-12 col-lg-12 col-xl-12">
+                    <div class="card bg-primary custom-card card-box">
+                        <div class="card-body p-4">
+            <form action="{{route('admin.call_records.index')}}" method="get">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Call Type</label>
+                        <select id="inputState" class="form-control" name="type">
+                            <option selected>--Choose Type--</option>
+                            <option value="INCOMING" {{request()->input('type') == 'INCOMING' ? 'selected':''}}>INCOMING CALL</option>
+                            <option value="OUTGOING" {{request()->input('type') == 'OUTGOING' ? 'selected':''}}>OUTGOING CALL</option>
+                            <option value="MISSED" {{request()->input('type') == 'MISSED' ? 'selected':''}}>MISSED CALL</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputZip">Start Date</label>
+                        <input type="datetime-local" class="form-control" name="start_date" min="2022-01-01T00:00" value="{{$startDate}}">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="inputZip">End Date</label>
+                        <input type="datetime-local" class="form-control" name="end_date" max="{{$max_date}}"  value="{{$endDate}}">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputZip">.</label>
+                        <input type="submit" class="btn btn-info" style="margin-top: 30px" value="Filter">
+                    </div>
+                </div>
+            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 
 
     <!-- Row -->
